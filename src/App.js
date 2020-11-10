@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './App.css'
 import Thought from './components/Thought.jsx'
 import Button from './components/Button.jsx'
+import Form from './components/Form.jsx'
 import icon from './assets/icon-add.png'
 
 class App extends Component {
@@ -51,6 +52,8 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Form />
+        <div id="overlay" />
         <h1>Shower Thoughts</h1>
         <img src={icon} onClick={this.openForm} id="add-icon" alt="Icon with a plus sign"/>
         <Button variant='inverted' onClick={this.handleChange}>Generate a thought</Button>
