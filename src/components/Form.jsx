@@ -29,7 +29,9 @@ class Form extends Component {
       })
     })
     .then(response => response.json())
-    .then(console.log)
+    .then((newThought) => {
+      this.props.addNewThought(newThought)
+    })
   }
 
   render() {

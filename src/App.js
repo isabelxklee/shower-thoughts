@@ -47,6 +47,12 @@ class App extends Component {
     }
   }
 
+  addNewThought = (newThought) => {
+    this.setState({
+      thoughts: [...this.state.thoughts, newThought]
+    })
+  }
+
   render() {
     let {thoughts, selectedIndex, displayForm} = this.state
 
@@ -55,7 +61,7 @@ class App extends Component {
         {displayForm === true
         ?
           <>
-            <Form icon={icon} toggleFormDisplay={this.toggleFormDisplay}/>
+            <Form icon={icon} toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought}/>
             <div id="overlay" onClick={this.toggleFormDisplay}/>
           </>
         :

@@ -29,6 +29,11 @@
       "emoji": "🌱",
       "quote": "Plants are just animals that don't move.",
       "id": 6
+    },
+    {
+      "emoji": "🚧",
+      "quote": "Test",
+      "id": 7
     }
   ]
 }
