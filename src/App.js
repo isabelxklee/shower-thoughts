@@ -7,7 +7,7 @@ import icon from './assets/icon-add.png'
 class App extends Component {
   state = {
     thoughts: [],
-    selectedThought: 1,
+    selectedIndex: 0,
     displayForm: false,
   }
 
@@ -15,22 +15,14 @@ class App extends Component {
     fetch("http://localhost:3000/thoughts")
     .then(response => response.json())
     .then((thoughtsArray) => {
+      let shuffledArray = thoughtsArray.sort(() => {
+        return 0.5 - Math.random()
+      })
+  
       this.setState({
-        thoughts: thoughtsArray
+        thoughts: shuffledArray
       })
     })
-  }
-
-  findSelectedThought = () => {
-    let {thoughts, selectedThought} = this.state
-
-    if (selectedThought === 0) {
-      return thoughts
-    } else {
-      return thoughts.find((thought) => {
-        return thought.id === this.state.selectedThought
-      })
-    }
   }
 
   openForm = () => {
@@ -39,13 +31,30 @@ class App extends Component {
     })
   }
 
+  handleChange = () => {
+    let arrLength = this.state.thoughts.length
+
+    if (this.state.selectedIndex < arrLength - 1) {
+      console.log(this.state.selectedIndex)
+      this.setState({
+        selectedIndex: this.state.selectedIndex + 1
+      })
+    } else {
+      this.setState({
+        selectedIndex: 1
+      })
+    }
+  }
+
   render() {
+    let {thoughts, selectedIndex} = this.state
+
     return (
       <div className="App">
         <h1>Shower Thoughts</h1>
         <img src={icon} onClick={this.openForm} id="add-icon" alt="Icon with a plus sign"/>
-        <Thought thought={this.findSelectedThought()} />
-        <Button variant='inverted'>Generate another thought</Button>
+        <Button variant='inverted' onClick={this.handleChange}>Generate another thought</Button>
+        <Thought thought={thoughts[selectedIndex]} />
       </div>
     )
   }
