@@ -6,7 +6,7 @@ body {
   background-color: #E8C030;
 }
 
-body, h1, h2, h3 {
+body, h1, h2, h3, input {
   font-weight: 400;
 }
 
@@ -26,23 +26,18 @@ h3 {
   margin: 3rem 0;
 }
 
-#add-icon {
+.icon {
   width: 2.4rem;
-  float: right;
   cursor: pointer;
+  float: right;
+}
+
+#add {
   margin-top: -3rem;
 }
 
-form {
-  background-color: white;
-  color: black;
-  z-index: 2;
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 0.4rem;
-  padding: 4rem;
+#close {
+  transform: rotate(45deg);
 }
 
 #overlay {
@@ -57,4 +52,38 @@ form {
   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
   z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+}
+
+form {
+  background-color: white;
+  color: black;
+  z-index: 2;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.4rem;
+  padding: 3rem 4rem 10rem;
+}
+
+label, input, textarea {
+  font-size: 1.2rem;
+  font-family: 'Apfel Grotezk';
+}
+
+input, textarea {
+  padding: 0.6rem;
+  margin: 0.4rem 0 2rem 0;
+}
+
+textarea {
+  width: 50%;
+  height: 35%;
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem 2.4rem;
 }

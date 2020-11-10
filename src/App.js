@@ -56,7 +56,7 @@ class App extends Component {
         {displayForm === true
         ?
           <>
-            <Form />
+            <Form icon={icon} toggleFormDisplay={this.toggleFormDisplay}/>
             <div id="overlay" onClick={this.toggleFormDisplay}/>
           </>
         :
@@ -64,7 +64,7 @@ class App extends Component {
         }
         
         <h1>Shower Thoughts</h1>
-        <img src={icon} onClick={this.toggleFormDisplay} id="add-icon" alt="Icon with a plus sign"/>
+        <img src={icon} onClick={this.toggleFormDisplay} className="icon" id="add" alt="Icon with a plus sign"/>
         <Button variant='inverted' onClick={this.handleChange}>Generate a thought</Button>
         <Thought thought={thoughts[selectedIndex]} />
       </div>
