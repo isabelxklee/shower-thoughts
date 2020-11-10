@@ -5,7 +5,7 @@ const Button = styled('button')(
   {
     fontFamily: 'Apfel Grotezk',
     padding: '1rem 1.4rem',
-    fontSize: '1.4rem',
+    fontSize: '1.2rem',
     fontWeight: '400',
     border: 'none',
     backgroundColor: 'black',

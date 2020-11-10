@@ -17,3 +17,10 @@ h1 {
 h2 {
   font-size: 5rem;
 }
+
+#add-icon {
+  width: 2.4rem;
+  float: right;
+  cursor: pointer;
+  margin-top: -3rem;
+}
