@@ -52,8 +52,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Form />
-        <div id="overlay" />
+        {/* <Form />
+        <div id="overlay" /> */}
         <h1>Shower Thoughts</h1>
         <img src={icon} onClick={this.openForm} id="add-icon" alt="Icon with a plus sign"/>
         <Button variant='inverted' onClick={this.handleChange}>Generate a thought</Button>

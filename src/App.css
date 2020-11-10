@@ -6,7 +6,7 @@ body {
   background-color: #E8C030;
 }
 
-body, h1, h2 {
+body, h1, h2, h3 {
   font-weight: 400;
 }
 
@@ -16,6 +16,10 @@ h1 {
 
 h2 {
   font-size: 5rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 #thought {
@@ -38,6 +42,7 @@ form {
   height: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.4rem;
+  padding: 4rem;
 }
 
 #overlay {

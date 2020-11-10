@@ -4,8 +4,16 @@ class Form extends Component {
   render() {
     return(
       <form>
-        <label>hello</label>
-        <input placeholder="enter"/>
+        <h3>Add a new shower thought</h3>
+
+        <label>
+          Quote
+          <br />
+          <input type="text" name="quote" />
+        </label>
+
+        <br />
+        <input type="submit" value="Create thought" />
       </form>
     )
   }
