@@ -3,20 +3,22 @@ import {variant} from 'styled-system'
 
 const Button = styled('button')(
   {
-    padding: '1rem 2rem',
+    fontFamily: 'Apfel Grotezk',
+    padding: '1rem 1.4rem',
     fontSize: '1.4rem',
-    fontWeight: '600',
+    fontWeight: '400',
     border: 'none',
     backgroundColor: 'black',
-    color: 'white',
+    color: '#E8C030',
     display: 'block'
   },
 
   variant({
     variants: {
-      primary: {
-      },
-      secondary: {
+      inverted: {
+        backgroundColor: '#E8C030',
+        color: 'black',
+        border: '2px solid black'
       },
     }
   })

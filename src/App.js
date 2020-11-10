@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
         <h1>Shower Thoughts</h1>
         <Thought thought={this.findSelectedThought()} />
-        <Button>Generate another thought</Button>
+        <Button variant='inverted'>Generate another thought</Button>
       </div>
     )
   }

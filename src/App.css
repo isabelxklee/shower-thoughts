@@ -1,0 +1,19 @@
+body {
+  padding: 8rem;
+  font-family: 'Apfel Grotezk', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  background-color: #E8C030;
+}
+
+body, h1, h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}

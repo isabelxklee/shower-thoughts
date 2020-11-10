@@ -2,9 +2,9 @@ import React from 'react'
 
 function Thought(props) {
   return (
-    <>
-      {props.thought ? props.thought.quote : null}
-    </>
+    <div id="thought">
+      <h2>{props.thought ? props.thought.quote : null}</h2>
+    </div>
   )
 }
 
