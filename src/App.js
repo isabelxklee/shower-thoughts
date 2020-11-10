@@ -53,7 +53,7 @@ class App extends Component {
       <div className="App">
         <h1>Shower Thoughts</h1>
         <img src={icon} onClick={this.openForm} id="add-icon" alt="Icon with a plus sign"/>
-        <Button variant='inverted' onClick={this.handleChange}>Generate another thought</Button>
+        <Button variant='inverted' onClick={this.handleChange}>Generate a thought</Button>
         <Thought thought={thoughts[selectedIndex]} />
       </div>
     )

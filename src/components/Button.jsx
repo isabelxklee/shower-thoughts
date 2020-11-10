@@ -5,12 +5,12 @@ const Button = styled('button')(
   {
     fontFamily: 'Apfel Grotezk',
     padding: '1rem 1.4rem',
-    fontSize: '1.2rem',
+    fontSize: '1.6rem',
     fontWeight: '400',
     border: 'none',
     backgroundColor: 'black',
     color: '#E8C030',
-    display: 'block'
+    display: 'block',
   },
 
   variant({
@@ -18,7 +18,8 @@ const Button = styled('button')(
       inverted: {
         backgroundColor: '#E8C030',
         color: 'black',
-        border: '2px solid black'
+        border: '2px solid black',
+        margin: '6rem 0 0 0'
       },
     }
   })
