@@ -4,7 +4,6 @@ import Thought from './components/Thought.jsx'
 import Button from './components/Button.jsx'
 import Form from './components/Form.jsx'
 import icon from './assets/icon-add.png'
-import { display } from 'styled-system'
 
 class App extends Component {
   state = {
