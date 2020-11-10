@@ -1,9 +1,10 @@
 import React from 'react' 
 
-function Thought() {
-
+function Thought(props) {
   return (
-    "hello world"
+    <>
+      {props.thought ? props.thought.quote : null}
+    </>
   )
 }
 
