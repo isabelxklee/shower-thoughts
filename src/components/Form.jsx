@@ -7,13 +7,21 @@ class Form extends Component {
         <h3>Add a new shower thought</h3>
 
         <label>
+          Emoji
+          <br />
+          <input type="text" name="emoji" />
+        </label>
+
+        <br />
+
+        <label>
           Quote
           <br />
           <input type="text" name="quote" />
         </label>
 
         <br />
-        <input type="submit" value="Create thought" />
+        <input type="submit" value="Add thought" />
       </form>
     )
   }
