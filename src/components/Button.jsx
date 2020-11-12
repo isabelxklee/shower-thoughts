@@ -19,7 +19,10 @@ const Button = styled('button')(
         backgroundColor: '#E8C030',
         color: 'black',
         border: '2px solid black',
-        margin: '6rem 0 0 0'
+        margin: '6rem 0 0 0',
+        &hover: {
+          
+        }
       },
     }
   })

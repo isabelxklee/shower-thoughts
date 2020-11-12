@@ -3,10 +3,14 @@ body {
   font-family: 'Apfel Grotezk', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
-  background-color: #E8C030;
+  background-color: #e8c030;
 }
 
-body, h1, h2, h3, input {
+body,
+h1,
+h2,
+h3,
+input {
   font-weight: 400;
 }
 
@@ -24,6 +28,7 @@ h3 {
 
 #thought {
   margin: 3rem 0;
+  animation: fadeIn 0.5s;
 }
 
 .icon {
@@ -36,8 +41,18 @@ h3 {
   margin-top: -3rem;
 }
 
+#add:hover {
+  transform: rotate(90deg);
+  transition-duration: 0.5s;
+}
+
 #close {
   transform: rotate(45deg);
+}
+
+#close:hover {
+  transform: rotate(135deg);
+  transition-duration: 0.5s;
 }
 
 #overlay {
@@ -45,13 +60,22 @@ h3 {
   display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
-  top: 0; 
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
   z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 form {
@@ -64,14 +88,18 @@ form {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.4rem;
   padding: 3rem 4rem 10rem;
+  animation: fadeIn 0.5s;
 }
 
-label, input, textarea {
+label,
+input,
+textarea {
   font-size: 1.2rem;
   font-family: 'Apfel Grotezk';
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.6rem;
   margin: 0.4rem 0 2rem 0;
 }
@@ -81,7 +109,7 @@ textarea {
   height: 35%;
 }
 
-input[type=submit] {
+input[type='submit'] {
   background-color: black;
   color: white;
   border: none;

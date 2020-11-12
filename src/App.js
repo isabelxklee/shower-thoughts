@@ -13,22 +13,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/thoughts")
-    .then(response => response.json())
-    .then((thoughtsArray) => {
-      let shuffledArray = thoughtsArray.sort(() => {
-        return 0.5 - Math.random()
+    fetch('http://localhost:3000/thoughts')
+      .then((response) => response.json())
+      .then((thoughtsArray) => {
+        let shuffledArray = thoughtsArray.sort(() => {
+          return 0.5 - Math.random()
+        })
+
+        this.setState({
+          thoughts: shuffledArray,
+        })
       })
-  
-      this.setState({
-        thoughts: shuffledArray
-      })
-    })
   }
 
   toggleFormDisplay = () => {
     this.setState({
-      displayForm: !this.state.displayForm
+      displayForm: !this.state.displayForm,
     })
   }
 
@@ -38,18 +38,18 @@ class App extends Component {
     if (this.state.selectedIndex < arrLength - 1) {
       console.log(this.state.selectedIndex)
       this.setState({
-        selectedIndex: this.state.selectedIndex + 1
+        selectedIndex: this.state.selectedIndex + 1,
       })
     } else {
       this.setState({
-        selectedIndex: 1
+        selectedIndex: 1,
       })
     }
   }
 
   addNewThought = (newThought) => {
     this.setState({
-      thoughts: [...this.state.thoughts, newThought]
+      thoughts: [...this.state.thoughts, newThought],
     })
   }
 
@@ -58,19 +58,28 @@ class App extends Component {
 
     return (
       <div className="App">
-        {displayForm === true
-        ?
+        {displayForm === true ? (
           <>
-            <Form icon={icon} toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought}/>
-            <div id="overlay" onClick={this.toggleFormDisplay}/>
+            <Form
+              icon={icon}
+              toggleFormDisplay={this.toggleFormDisplay}
+              addNewThought={this.addNewThought}
+            />
+            <div id="overlay" onClick={this.toggleFormDisplay} />
           </>
-        :
-          null
-        }
-        
+        ) : null}
+
         <h1>Shower Thoughts</h1>
-        <img src={icon} onClick={this.toggleFormDisplay} className="icon" id="add" alt="Icon with a plus sign"/>
-        <Button variant='inverted' onClick={this.handleChange}>Generate a thought</Button>
+        <img
+          src={icon}
+          onClick={this.toggleFormDisplay}
+          className="icon"
+          id="add"
+          alt="Icon with a plus sign"
+        />
+        <Button variant="inverted" onClick={this.handleChange}>
+          Generate a thought
+        </Button>
         <Thought thought={thoughts[selectedIndex]} />
       </div>
     )
