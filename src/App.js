@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './App.css'
 import Thought from './components/Thought.jsx'
 import Button from './components/Button.jsx'
-import Form from './components/Form.jsx'
+import Form from './components/AddThoughtForm.jsx'
 import icon from './assets/icon-add.png'
 
 class App extends Component {
