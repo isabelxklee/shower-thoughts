@@ -10,7 +10,7 @@ const Button = styled('button')(
     backgroundColor: '#E8C030',
     color: 'black',
     border: '2px solid black',
-    borderRadius: '0.4rem',
+    borderRadius: '0.2rem',
     transition: '0.3s',
     margin: '6rem 0 0 0',
     cursor: 'pointer',
@@ -29,7 +29,7 @@ const Button = styled('button')(
         backgroundColor: 'black',
         color: 'white',
         border: '2px solid black',
-        margin: '0 1.4rem 0 0',
+        margin: '0 1rem 0 0',
         fontSize: '1.2rem',
         '&:hover': {
           color: 'white',
@@ -49,7 +49,7 @@ const Button = styled('button')(
           opacity: '0.5',
         },
       },
-    }
+    },
   })
 )
 

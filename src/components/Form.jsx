@@ -8,7 +8,7 @@ class Form extends Component {
     errors: {
       emoji: '',
       quote: '',
-    }
+    },
   }
 
   handleToggle = () => {
@@ -21,14 +21,17 @@ class Form extends Component {
     switch (event.target.name) {
       case 'emoji':
         errors.emoji = event.target.value.length < 1 ? '* Please pick at least one emoji!' : ''
-      break
+        break
 
       case 'quote':
-        errors.quote = event.target.value.length < 30 ? '* Your shower thought must be at least 30 characters long.' : ''
-      break
+        errors.quote =
+          event.target.value.length < 30
+            ? '* Your shower thought must be at least 30 characters long.'
+            : ''
+        break
 
       default:
-      break
+        break
     }
 
     this.setState({
@@ -56,29 +59,29 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} id="add-thought">
-        <h3>Add a new shower thought</h3>
+        <h3>Create a new shower thought</h3>
 
-        <label>Emoji</label>
+        <label>Pick an emoji</label>
         <br />
-        {this.state.errors.emoji.length > 0 && 
-          <p id="error">{this.state.errors.emoji}</p>
-        }
+        {this.state.errors.emoji.length > 0 && <p id="error">{this.state.errors.emoji}</p>}
         <input type="text" name="emoji" autoComplete="off" onChange={this.handleChange} />
 
         <br />
 
-        <label>Shower thought</label>
+        <label>What&apos;s your shower thought?</label>
         <br />
-        {this.state.errors.quote.length > 0 && 
-          <p id="error">{this.state.errors.quote}</p>
-        }
+        {this.state.errors.quote.length > 0 && <p id="error">{this.state.errors.quote}</p>}
         <textarea name="quote" autoComplete="off" onChange={this.handleChange} />
 
         <br />
 
         <div className="btn-group">
-          <Button type="submit" form="add-thought" variant='primary'>Add thought</Button>
-          <Button variant='secondary' type="button" onClick={this.handleToggle}>Cancel</Button>
+          <Button type="submit" form="add-thought" variant="primary">
+            Create
+          </Button>
+          <Button variant="secondary" type="button" onClick={this.handleToggle}>
+            Cancel
+          </Button>
         </div>
       </form>
     )

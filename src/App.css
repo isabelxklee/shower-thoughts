@@ -43,7 +43,8 @@ i.fa-plus-circle {
   cursor: pointer;
 }
 
-i.fa-plus, i.fa-recycle {
+i.fa-plus,
+i.fa-recycle {
   margin-right: 0.6rem;
 }
 
@@ -80,7 +81,7 @@ form {
   height: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.4rem;
-  padding: 2rem 4rem 15rem;
+  padding: 2rem 4rem 13rem;
   animation: fadeIn 0.5s;
 }
 
@@ -95,7 +96,7 @@ input,
 textarea {
   padding: 0.8rem;
   margin: 0.4rem 0 2rem 0;
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
   border: 2px solid black;
 }
 
@@ -157,7 +158,8 @@ p#error {
     margin: 6rem;
   }
 
-  input[type='text'], textarea {
+  input[type='text'],
+  textarea {
     width: 100%;
   }
 }

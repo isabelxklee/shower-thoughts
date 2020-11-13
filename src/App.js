@@ -71,9 +71,7 @@ class App extends Component {
 
         <h1>Shower Thoughts</h1>
         <i className="fa fa-plus-circle" onClick={this.toggleFormDisplay} />
-        <Button onClick={this.handleChange}>
-          Randomize
-        </Button>
+        <Button onClick={this.handleChange}>Randomize</Button>
         <Thought thought={thoughts[selectedIndex]} />
       </div>
     )
