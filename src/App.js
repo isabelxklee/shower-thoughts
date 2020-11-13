@@ -70,15 +70,9 @@ class App extends Component {
         ) : null}
 
         <h1>Shower Thoughts</h1>
-        <img
-          src={icon}
-          onClick={this.toggleFormDisplay}
-          className="icon"
-          id="add"
-          alt="Icon with a plus sign"
-        />
-        <Button variant="inverted" onClick={this.handleChange}>
-          Generate a thought
+        <i className="fa fa-plus-circle" onClick={this.toggleFormDisplay} />
+        <Button onClick={this.handleChange}>
+          Randomize
         </Button>
         <Thought thought={thoughts[selectedIndex]} />
       </div>

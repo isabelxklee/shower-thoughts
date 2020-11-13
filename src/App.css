@@ -1,5 +1,5 @@
 body {
-  padding: 4rem 8rem;
+  padding: 4rem 10rem;
   font-family: 'Apfel Grotezk', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
@@ -15,15 +15,20 @@ input {
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 h3 {
   font-size: 2rem;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
 }
 
 #thought {
@@ -31,28 +36,15 @@ h3 {
   animation: fadeIn 0.5s;
 }
 
-.icon {
-  width: 2.4rem;
-  cursor: pointer;
+i.fa-plus-circle {
+  font-size: 3rem;
   float: right;
-}
-
-#add {
   margin-top: -3rem;
+  cursor: pointer;
 }
 
-#add:hover {
-  transform: rotate(90deg);
-  transition-duration: 0.5s;
-}
-
-#close {
-  transform: rotate(45deg);
-}
-
-#close:hover {
-  transform: rotate(135deg);
-  transition-duration: 0.5s;
+i.fa-plus, i.fa-recycle {
+  margin-right: 0.6rem;
 }
 
 #overlay {
@@ -83,11 +75,12 @@ form {
   color: black;
   z-index: 2;
   position: absolute;
-  width: 50%;
+  margin: auto;
+  width: 65%;
   height: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.4rem;
-  padding: 3rem 4rem 10rem;
+  padding: 2rem 4rem 15rem;
   animation: fadeIn 0.5s;
 }
 
@@ -100,8 +93,14 @@ textarea {
 
 input,
 textarea {
-  padding: 0.6rem;
+  padding: 0.8rem;
   margin: 0.4rem 0 2rem 0;
+  border-radius: 0.4rem;
+  border: 2px solid black;
+}
+
+input[type='text'] {
+  width: 10%;
 }
 
 textarea {
@@ -114,4 +113,51 @@ input[type='submit'] {
   color: white;
   border: none;
   padding: 1rem 2.4rem;
+  cursor: pointer;
+}
+
+div.btn-group {
+  display: inline-block;
+}
+
+p#error {
+  color: rgb(218, 40, 0);
+  margin: 0.6rem 0;
+}
+
+/* mobile responsive styles */
+
+@media only screen and (max-width: 700px) {
+  body {
+    padding: 4rem 2rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  #overlay {
+    display: none;
+  }
+
+  form {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 3rem 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #close {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    margin: 6rem;
+  }
+
+  input[type='text'], textarea {
+    width: 100%;
+  }
 }
