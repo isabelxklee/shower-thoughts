@@ -11,6 +11,7 @@ const Button = styled('button')(
     backgroundColor: 'black',
     color: '#E8C030',
     display: 'block',
+    transition: '0.3s',
   },
 
   variant({
@@ -20,9 +21,10 @@ const Button = styled('button')(
         color: 'black',
         border: '2px solid black',
         margin: '6rem 0 0 0',
-        &hover: {
-          
-        }
+        '&:hover': {
+          color: '#e8c030',
+          bg: 'black',
+        },
       },
     }
   })
