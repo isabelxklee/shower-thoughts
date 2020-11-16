@@ -36,7 +36,6 @@ class App extends Component {
     let arrLength = this.state.thoughts.length
 
     if (this.state.selectedIndex < arrLength - 1) {
-      console.log(this.state.selectedIndex)
       this.setState({
         selectedIndex: this.state.selectedIndex + 1,
       })
