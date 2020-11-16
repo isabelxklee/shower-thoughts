@@ -6,7 +6,7 @@ import Button from './Button.jsx'
 const formSchema = Yup.object().shape({
   emoji: Yup.string()
     .max(5, "* Sorry, that's too many emojis!")
-    .required("* Please pick at least one emoji!"),
+    .required('* Please pick at least one emoji!'),
   thought: Yup.string()
     .min(30, '* Thoughts should be at least 30 characters.')
     .max(250, "* Sorry, that's too long for a thought.")
@@ -59,8 +59,19 @@ const AddThoughtForm = (props) => {
             <Field component="textarea" name="thought" autoComplete="off" />
             <br />
 
-            <Button variant="primary" type="submit">Submit</Button>
-            <Button variant="secondary" onClick={props.toggleFormDisplay} type="button">Cancel</Button>
+            {errors.thought || errors.emoji ? (
+              <Button variant="primary" type="submit" id="error">
+                Submit
+              </Button>
+            ) : (
+              <Button variant="primary" type="submit">
+                Create
+              </Button>
+            )}
+
+            <Button variant="secondary" onClick={props.toggleFormDisplay} type="button">
+              Cancel
+            </Button>
           </Form>
         )}
       </Formik>

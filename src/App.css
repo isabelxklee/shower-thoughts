@@ -121,6 +121,11 @@ div#error {
   margin: 0.6rem 0;
 }
 
+button#error {
+  opacity: 0.5;
+  cursor: default;
+}
+
 /* mobile responsive styles */
 
 @media only screen and (max-width: 700px) {
