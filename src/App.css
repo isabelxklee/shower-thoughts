@@ -95,13 +95,13 @@ textarea {
   border: 2px solid black;
 }
 
-input[type='text'] {
-  width: 10%;
-}
-
 textarea {
   width: 50%;
-  height: 35%;
+  height: 5rem;
+}
+
+input[type='text'] {
+  width: 10%;
 }
 
 input[type='submit'] {
@@ -116,7 +116,7 @@ div.btn-group {
   display: inline-block;
 }
 
-p#error {
+div#error {
   color: rgb(218, 40, 0);
   margin: 0.6rem 0;
 }

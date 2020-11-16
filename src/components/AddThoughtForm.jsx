@@ -1,16 +1,16 @@
 import React from 'react'
 import * as Yup from 'yup'
 import {Formik, Form, Field} from 'formik'
+import Button from './Button.jsx'
 
 const formSchema = Yup.object().shape({
   emoji: Yup.string()
-    .min(1, 'Please pick at least one emoji!')
-    .max(5, "Sorry, that's too many emojis!")
-    .required('Required'),
+    .max(5, "* Sorry, that's too many emojis!")
+    .required("* Please pick at least one emoji!"),
   thought: Yup.string()
-    .min(30, 'Thoughts should be at least 30 characters.')
-    .max(250, "Sorry, that's too long for a thought.")
-    .required('Required'),
+    .min(30, '* Thoughts should be at least 30 characters.')
+    .max(250, "* Sorry, that's too long for a thought.")
+    .required('* This is a required field.'),
 })
 
 const handleSubmit = (props, values) => {
@@ -48,16 +48,19 @@ const AddThoughtForm = (props) => {
             <h3>Add shower thought</h3>
 
             <label htmlFor="emoji">Pick an emoji</label>
+            <br />
+            {touched.emoji && errors.emoji && <div id="error">{errors.emoji}</div>}
             <Field name="emoji" type="text" autoComplete="off" />
-            {touched.emoji && errors.emoji && <div>{errors.emoji}</div>}
             <br />
 
             <label htmlFor="thought">What is your shower thought?</label>
-            <Field name="thought" type="textarea" autoComplete="off" />
-            {touched.thought && errors.thought && <div>{errors.thought}</div>}
+            <br />
+            {touched.thought && errors.thought && <div id="error">{errors.thought}</div>}
+            <Field component="textarea" name="thought" autoComplete="off" />
             <br />
 
-            <button type="submit">Submit</button>
+            <Button variant="primary" type="submit">Submit</Button>
+            <Button variant="secondary" onClick={props.toggleFormDisplay} type="button">Cancel</Button>
           </Form>
         )}
       </Formik>
