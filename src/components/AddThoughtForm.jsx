@@ -43,22 +43,22 @@ const AddThoughtForm = (props) => {
           handleSubmit(props, values)
         }}
       >
-        {({ errors, touched }) => (
-        <Form>
-          <h3>Add shower thought</h3>
+        {({errors, touched}) => (
+          <Form>
+            <h3>Add shower thought</h3>
 
-          <label htmlFor="emoji">Pick an emoji</label>
-          <Field name="emoji" type="text" autoComplete="off" />
-          {touched.emoji && errors.emoji && <div>{errors.emoji}</div>}
-          <br/>
+            <label htmlFor="emoji">Pick an emoji</label>
+            <Field name="emoji" type="text" autoComplete="off" />
+            {touched.emoji && errors.emoji && <div>{errors.emoji}</div>}
+            <br />
 
-          <label htmlFor="thought">What is your shower thought?</label>
-          <Field name="thought" type="textarea" autoComplete="off" />
-          {touched.thought && errors.thought && <div>{errors.thought}</div>}
-          <br/>
+            <label htmlFor="thought">What is your shower thought?</label>
+            <Field name="thought" type="textarea" autoComplete="off" />
+            {touched.thought && errors.thought && <div>{errors.thought}</div>}
+            <br />
 
-          <button type="submit">Submit</button>
-        </Form>
+            <button type="submit">Submit</button>
+          </Form>
         )}
       </Formik>
     </div>
