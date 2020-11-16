@@ -37,6 +37,6 @@
 ## Tech stack
 
 - [React.js](https://reactjs.org)
-- [Formik] (https://formik.org)
-- [Yup] (https://github.com/jquense/yup)
+- [Formik](https://formik.org)
+- [Yup](https://github.com/jquense/yup)
 - HTML/CSS
