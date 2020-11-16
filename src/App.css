@@ -31,11 +31,6 @@ p {
   font-size: 1rem;
 }
 
-#thought {
-  margin: 3rem 0;
-  animation: fadeIn 0.5s;
-}
-
 i.fa-plus-circle {
   font-size: 3rem;
   float: right;
