@@ -1,17 +1,6 @@
 import React from 'react'
 import * as Yup from 'yup'
-import {Formik, Form, useField} from 'formik'
-
-const TextInput = ({label, ...props}) => {
-  const [field, meta] = useField(props)
-  return (
-    <>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <input className="text-input" {...field} {...props} />
-      {meta.error ? <div className="error">{meta.error}</div> : null}
-    </>
-  )
-}
+import {Formik, Form, Field} from 'formik'
 
 const formSchema = Yup.object().shape({
   emoji: Yup.string()
@@ -24,7 +13,24 @@ const formSchema = Yup.object().shape({
     .required('Required'),
 })
 
-const AddThoughtForm = () => {
+const handleSubmit = (props, values) => {
+  fetch('http://localhost:3000/thoughts', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      emoji: values.emoji,
+      quote: values.thought,
+    }),
+  })
+    .then((response) => response.json())
+    .then((newThought) => {
+      props.addNewThought(newThought)
+    })
+}
+
+const AddThoughtForm = (props) => {
   return (
     <div>
       <Formik
@@ -34,21 +40,26 @@ const AddThoughtForm = () => {
         }}
         validationSchema={formSchema}
         onSubmit={(values) => {
-          console.log(values)
+          handleSubmit(props, values)
         }}
       >
+        {({ errors, touched }) => (
         <Form>
           <h3>Add shower thought</h3>
-          <TextInput label="Pick an emoji" name="emoji" type="text" autocomplete="off" />
 
-          <TextInput
-            label="What's your shower thought?"
-            name="thought"
-            type="text"
-            autocomplete="off"
-          />
+          <label htmlFor="emoji">Pick an emoji</label>
+          <Field name="emoji" type="text" autoComplete="off" />
+          {touched.emoji && errors.emoji && <div>{errors.emoji}</div>}
+          <br/>
+
+          <label htmlFor="thought">What is your shower thought?</label>
+          <Field name="thought" type="textarea" autoComplete="off" />
+          {touched.thought && errors.thought && <div>{errors.thought}</div>}
+          <br/>
+
           <button type="submit">Submit</button>
         </Form>
+        )}
       </Formik>
     </div>
   )
