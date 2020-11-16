@@ -39,4 +39,6 @@
 - [React.js](https://reactjs.org)
 - [Formik](https://formik.org)
 - [Yup](https://github.com/jquense/yup)
+- [styled-components](https://styled-components.com)
+- [styled-system](https://styled-system.com)
 - HTML/CSS
