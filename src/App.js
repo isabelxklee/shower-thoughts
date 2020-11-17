@@ -27,23 +27,32 @@ class App extends Component {
   }
 
   toggleFormDisplay = () => {
-    this.setState({
-      displayForm: !this.state.displayForm,
-    })
+    // good
+    // when you're updating the state based off of the previous state, it has to be in the form of a callback
+    this.setState((state) => ({
+      displayForm: !state.displayForm,
+    }))
+
+    // bad
+    // this.setState({
+    //   displayForm: !this.state.displayForm,
+    // })
   }
 
   handleChange = () => {
-    let arrLength = this.state.thoughts.length
+    this.setState((state) => {
+      const arrLength = state.thoughts.length
 
-    if (this.state.selectedIndex < arrLength - 1) {
-      this.setState({
-        selectedIndex: this.state.selectedIndex + 1,
-      })
-    } else {
-      this.setState({
-        selectedIndex: 1,
-      })
-    }
+      if (state.selectedIndex < arrLength - 1) {
+        return {
+          selectedIndex: state.selectedIndex + 1,
+        }
+      } else {
+        return {
+          selectedIndex: 1,
+        }
+      }
+    })
   }
 
   addNewThought = (newThought) => {
