@@ -62,13 +62,13 @@ class App extends Component {
   }
 
   addNewThought = (newThought) => {
-    this.setState({
-      thoughts: [...this.state.thoughts, newThought],
-    })
+    this.setState((state) => ({
+      thoughts: [...state.thoughts, newThought],
+    }))
   }
 
   render() {
-    let {thoughts, selectedIndex, displayForm} = this.state
+    const {thoughts, selectedIndex, displayForm} = this.state
 
     return (
       <div className="App">
@@ -85,7 +85,9 @@ class App extends Component {
 
         <h1>Shower Thoughts</h1>
         <i className="fa fa-plus-circle" onClick={this.toggleFormDisplay} />
-        <Button onClick={this.handleChange}>Randomize</Button>
+        <Button onClick={this.handleChange} variant="large">
+          Randomize
+        </Button>
         <Thought thought={thoughts[selectedIndex]} />
       </div>
     )

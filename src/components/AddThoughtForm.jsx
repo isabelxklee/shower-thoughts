@@ -43,6 +43,7 @@ const AddThoughtForm = (props) => {
           handleSubmit(props, values)
         }}
       >
+        {/* this is a render method, which expects a react component */}
         {({errors, touched}) => (
           <Form>
             <h3>Add shower thought</h3>
@@ -59,17 +60,15 @@ const AddThoughtForm = (props) => {
             <Field component="textarea" name="thought" autoComplete="off" />
             <br />
 
-            {errors.thought || errors.emoji ? (
-              <Button variant="primary" type="submit" id="error">
-                Submit
-              </Button>
-            ) : (
-              <Button variant="primary" type="submit">
-                Create
-              </Button>
-            )}
+            <Button
+              variant="primary"
+              type="submit"
+              id={errors.thought || errors.emoji ? 'error' : ''}
+            >
+              Create
+            </Button>
 
-            <Button variant="secondary" onClick={props.toggleFormDisplay} type="button">
+            <Button variant="inverted" onClick={props.toggleFormDisplay} type="button">
               Cancel
             </Button>
           </Form>
