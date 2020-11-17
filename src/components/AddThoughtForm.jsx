@@ -60,11 +60,7 @@ const AddThoughtForm = (props) => {
             <Field component="textarea" name="thought" autoComplete="off" />
             <br />
 
-            <Button
-              variant="primary"
-              type="submit"
-              id={errors.thought || errors.emoji ? 'error' : ''}
-            >
+            <Button type="submit" id={errors.thought || errors.emoji ? 'error' : ''}>
               Create
             </Button>
 

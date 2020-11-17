@@ -137,10 +137,6 @@ button#error {
     font-size: 2.4rem;
   }
 
-  #overlay {
-    display: none;
-  }
-
   form {
     width: auto;
     height: 100%;
