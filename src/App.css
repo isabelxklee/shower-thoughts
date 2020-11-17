@@ -70,10 +70,11 @@ form {
   background-color: white;
   color: black;
   z-index: 2;
+  width: 50%;
+  height: 50%;
   position: absolute;
   margin: auto;
-  width: 65%;
-  height: 50%;
+  right: 20%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 0.4rem;
   padding: 2rem 4rem 13rem;
@@ -142,9 +143,11 @@ button#error {
     height: 100%;
     margin: 0;
     padding: 3rem 4rem;
-    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    position: fixed;
+    border-radius: 0;
   }
 
   #close {
