@@ -40,7 +40,8 @@ const Button = styled.button`
           opacity: '1',
         },
         '@media only screen and (max-width: 700px)': {
-          width: '75%',
+          right: '25%',
+          width: '50%',
           bottom: '5',
           position: 'fixed',
         },
