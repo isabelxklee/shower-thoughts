@@ -37,10 +37,6 @@ class App extends Component {
     this.setState((state) => {
       const arrLength = state.thoughts.length
 
-      // then refactor to the ternary operator
-      // reason: we only need 1 return, instead of 2 returns that reference the same property
-      return {selectedIndex: state.selectedIndex < arrLength - 1 ? state.selectedIndex + 1 : 0}
-
       // show this version first
 
       // if (state.selectedIndex < arrLength - 1) {
@@ -52,6 +48,10 @@ class App extends Component {
       //     selectedIndex: 0,
       //   }
       // }
+
+      // then refactor to the ternary operator
+      // reason: we only need 1 return, instead of 2 returns that reference the same property
+      return {selectedIndex: state.selectedIndex < arrLength - 1 ? state.selectedIndex + 1 : 0}
     })
   }
 
