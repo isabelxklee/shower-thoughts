@@ -16,7 +16,7 @@ class App extends Component {
     fetch('http://localhost:3000/thoughts')
       .then((response) => response.json())
       .then((thoughtsArray) => {
-        let shuffledArray = thoughtsArray.sort(() => {
+        const shuffledArray = thoughtsArray.sort(() => {
           return 0.5 - Math.random()
         })
 
@@ -27,16 +27,10 @@ class App extends Component {
   }
 
   toggleFormDisplay = () => {
-    // good
     // when you're updating the state based off of the previous state, it has to be in the form of a callback
     this.setState((state) => ({
       displayForm: !state.displayForm,
     }))
-
-    // bad
-    // this.setState({
-    //   displayForm: !this.state.displayForm,
-    // })
   }
 
   handleChange = () => {
@@ -64,6 +58,7 @@ class App extends Component {
   addNewThought = (newThought) => {
     this.setState((state) => ({
       thoughts: [...state.thoughts, newThought],
+      displayForm: false,
     }))
   }
 

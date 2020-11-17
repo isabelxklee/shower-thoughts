@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Thought(props) {
-  return (
-    <>
-      <h2 id="thought">
-        {props.thought ? props.thought.emoji : null} {props.thought ? props.thought.quote : null}
+const Thought = ({thought}) => (
+  <section id="thought">
+    {thought ? (
+      <h2>
+        {thought.emoji} {thought.quote}
       </h2>
-    </>
-  )
-}
+    ) : null}
+  </section>
+)
 
 export default Thought
