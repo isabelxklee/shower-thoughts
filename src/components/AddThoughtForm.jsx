@@ -14,7 +14,7 @@ const formSchema = Yup.object().shape({
 })
 
 const handleSubmit = (props, values) => {
-  fetch('http://localhost:3000/thoughts', {
+  fetch('https://shower-thoughts-json.herokuapp.com/thoughts', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',

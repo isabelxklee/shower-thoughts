@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/thoughts')
+    fetch('https://shower-thoughts-json.herokuapp.com/thoughts')
       .then((response) => response.json())
       .then((thoughtsArray) => {
         const shuffledArray = thoughtsArray.sort(() => {
