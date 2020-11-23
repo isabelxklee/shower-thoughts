@@ -151,7 +151,7 @@ button#error {
 
   form {
     width: auto;
-    height: 100%;
+    height: auto;
     margin: 0;
     padding: 3rem;
     top: 0;
@@ -159,6 +159,7 @@ button#error {
     right: 0;
     position: fixed;
     border-radius: 0;
+    grid-row-gap: 0.6rem;
   }
 
   #close {
@@ -171,5 +172,9 @@ button#error {
   input[type='text'],
   textarea {
     width: auto;
+  }
+
+  section.button-group {
+    display: block;
   }
 }
