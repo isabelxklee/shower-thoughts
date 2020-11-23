@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Apfel Grotezk';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Apfel Grotezk'), url('./fonts/Apfel-Grotezk-Regular.woff') format('woff');
+}
+
 body {
   padding: 4rem 10rem;
   font-family: 'Apfel Grotezk', Helvetica, sans-serif;
