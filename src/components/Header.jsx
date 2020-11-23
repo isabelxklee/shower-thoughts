@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import Button from './Button.jsx'
 
 const Navigation = styled.header`
   background-color: black;
@@ -28,7 +27,6 @@ const TextLink = styled.a`
   font-weight: 400;
   transition: 0.3s;
   margin: 1rem;
-  border-bottom: 2px solid white;
   cursor: pointer;
 
   &:hover {
@@ -36,13 +34,12 @@ const TextLink = styled.a`
   }
 `
 
-const Header = () => (
+const Header = ({handleChange, toggleFormDisplay}) => (
   <Navigation>
     <Title>Shower Thoughts</Title>
     <Links>
-      <TextLink>Randomize</TextLink>
-      <TextLink>Create new thought</TextLink>
-      {/* <Button variant="text-link">Create new thought</Button> */}
+      <TextLink onClick={handleChange}>🔮 Randomize</TextLink>
+      <TextLink onClick={toggleFormDisplay}>⚡️ Create new thought</TextLink>
     </Links>
   </Navigation>
 )

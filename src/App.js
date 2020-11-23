@@ -2,10 +2,8 @@ import React, {Component} from 'react'
 import './App.css'
 import Wrapper from './components/Wrapper.jsx'
 import Thought from './components/Thought.jsx'
-// import Button from './components/Button.jsx'
 import Form from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
-import icon from './assets/icon-add.png'
 
 class App extends Component {
   state = {
@@ -69,22 +67,17 @@ class App extends Component {
 
     return (
       <section className="app">
-        <Header />
+        <Header
+          handleChange={this.handleChange}
+          toggleFormDisplay={this.toggleFormDisplay}
+        />
         <Wrapper>
           {displayForm === true ? (
             <>
-              <Form
-                icon={icon}
-                toggleFormDisplay={this.toggleFormDisplay}
-                addNewThought={this.addNewThought}
-              />
+              <Form toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought} />
               <div id="overlay" onClick={this.toggleFormDisplay} />
             </>
           ) : null}
-
-          {/* <Button onClick={this.handleChange} variant="large">
-            Randomize
-          </Button> */}
           <Thought thought={thoughts[selectedIndex]} />
         </Wrapper>
       </section>
