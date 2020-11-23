@@ -23,7 +23,7 @@ input {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -75,11 +75,13 @@ i.fa-recycle {
 }
 
 form {
+  display: grid;
   background-color: white;
   color: black;
   z-index: 2;
   width: 50%;
   height: 50%;
+  top: 4rem;
   position: absolute;
   margin: auto;
   right: 20%;
@@ -139,15 +141,19 @@ button#error {
 
 @media only screen and (max-width: 700px) {
   h2 {
-    font-size: 2.4rem;
-    margin-top: 4rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  h3 {
+    margin: 1rem 0;
   }
 
   form {
     width: auto;
     height: 100%;
     margin: 0;
-    padding: 3rem 4rem;
+    padding: 3rem;
     top: 0;
     left: 0;
     right: 0;
@@ -164,6 +170,6 @@ button#error {
 
   input[type='text'],
   textarea {
-    width: 100%;
+    width: auto;
   }
 }

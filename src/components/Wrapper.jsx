@@ -4,7 +4,7 @@ const Wrapper = styled.section`
   padding: 8rem 10rem;
 
   @media only screen and (max-width: 700px) {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
   }
 `
 

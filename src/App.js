@@ -67,10 +67,7 @@ class App extends Component {
 
     return (
       <section className="app">
-        <Header
-          handleChange={this.handleChange}
-          toggleFormDisplay={this.toggleFormDisplay}
-        />
+        <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
           {displayForm === true ? (
             <>

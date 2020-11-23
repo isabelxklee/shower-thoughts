@@ -7,17 +7,33 @@ const Navigation = styled.header`
   height: 4rem;
   margin: auto;
   padding: 1rem 3rem;
+
+  @media only screen and (max-width: 700px) {
+    height: auto;
+    padding: 1rem 2rem;
+  }
 `
 
 const Links = styled.section`
   float: right;
   display: inline-flex;
+
+  @media only screen and (max-width: 700px) {
+    float: none;
+    display: grid;
+    grid-row-gap: 0.4rem;
+  }
 `
 
 const Title = styled.h1`
   float: left;
   color: white;
   margin: 1rem;
+
+  @media only screen and (max-width: 700px) {
+    float: none;
+    margin: 1rem 0;
+  }
 `
 
 const TextLink = styled.a`
@@ -31,6 +47,10 @@ const TextLink = styled.a`
 
   &:hover {
     opacity: 0.5;
+  }
+
+  @media only screen and (max-width: 700px) {
+    margin: 0 0 0.6rem 0;
   }
 `
 

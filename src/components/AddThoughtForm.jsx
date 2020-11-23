@@ -49,16 +49,12 @@ const AddThoughtForm = (props) => {
             <h3>Add shower thought</h3>
 
             <label htmlFor="emoji">Pick an emoji</label>
-            <br />
             {touched.emoji && errors.emoji && <div id="error">{errors.emoji}</div>}
             <Field name="emoji" type="text" autoComplete="off" />
-            <br />
 
             <label htmlFor="thought">What is your shower thought?</label>
-            <br />
             {touched.thought && errors.thought && <div id="error">{errors.thought}</div>}
             <Field component="textarea" name="thought" autoComplete="off" />
-            <br />
 
             <Button type="submit" id={errors.thought || errors.emoji ? 'error' : ''}>
               Create

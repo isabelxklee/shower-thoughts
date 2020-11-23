@@ -5,7 +5,7 @@ const Button = styled.button`
   font-family: 'Apfel Grotezk';
   background-color: black;
   color: white;
-  margin: 0 1rem 0 0;
+  margin: 2rem 2rem 0.4rem 0;
   border: 2px solid black;
   border-radius: 0.2rem;
   padding: 1rem 1.4rem;
@@ -28,23 +28,6 @@ const Button = styled.button`
       inverted: {
         backgroundColor: 'white',
         color: 'black',
-      },
-      large: {
-        fontSize: '1.6rem',
-        backgroundColor: '#e8c030',
-        color: 'black',
-        '&:hover': {
-          color: '#e8c030',
-          backgroundColor: 'black',
-          opacity: '1',
-        },
-        '@media only screen and (max-width: 700px)': {
-          right: '25%',
-          width: '50%',
-          bottom: '0',
-          position: 'fixed',
-          margin: '4rem 0',
-        },
       },
     },
   })}
