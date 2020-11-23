@@ -56,13 +56,15 @@ const AddThoughtForm = (props) => {
             {touched.thought && errors.thought && <div id="error">{errors.thought}</div>}
             <Field component="textarea" name="thought" autoComplete="off" />
 
-            <Button type="submit" id={errors.thought || errors.emoji ? 'error' : ''}>
-              Create
-            </Button>
+            <section className="button-group">
+              <Button type="submit" id={errors.thought || errors.emoji ? 'error' : ''}>
+                Create
+              </Button>
 
-            <Button variant="inverted" onClick={props.toggleFormDisplay} type="button">
-              Cancel
-            </Button>
+              <Button variant="inverted" onClick={props.toggleFormDisplay} type="button">
+                Cancel
+              </Button>
+            </section>
           </Form>
         )}
       </Formik>

@@ -75,7 +75,7 @@ i.fa-recycle {
 }
 
 form {
-  display: grid;
+  display: inline-grid;
   background-color: white;
   color: black;
   z-index: 2;
@@ -123,8 +123,8 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-div.btn-group {
-  display: inline-block;
+section.button-group {
+  display: flex;
 }
 
 div#error {
