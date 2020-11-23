@@ -39,19 +39,7 @@ p {
   font-size: 1rem;
 }
 
-i.fa-plus-circle {
-  font-size: 3rem;
-  float: right;
-  margin-top: -3rem;
-  cursor: pointer;
-}
-
-i.fa-plus,
-i.fa-recycle {
-  margin-right: 0.6rem;
-}
-
-#overlay {
+.overlay {
   position: fixed;
   display: block;
   width: 100%;
@@ -123,11 +111,11 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-section.button-group {
+.button-group {
   display: flex;
 }
 
-div#error {
+.error {
   color: rgb(218, 40, 0);
   margin: 0.6rem 0;
 }
@@ -162,19 +150,12 @@ button#error {
     grid-row-gap: 0.6rem;
   }
 
-  #close {
-    bottom: 0;
-    position: fixed;
-    right: 0;
-    margin: 6rem;
-  }
-
   input[type='text'],
   textarea {
     width: auto;
   }
 
-  section.button-group {
+  .button-group {
     display: block;
   }
 }

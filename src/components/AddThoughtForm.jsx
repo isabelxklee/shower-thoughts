@@ -32,7 +32,7 @@ const handleSubmit = (props, values) => {
 
 const AddThoughtForm = (props) => {
   return (
-    <div>
+    <section>
       <Formik
         initialValues={{
           emoji: '',
@@ -49,11 +49,13 @@ const AddThoughtForm = (props) => {
             <h3>Add shower thought</h3>
 
             <label htmlFor="emoji">Pick an emoji</label>
-            {touched.emoji && errors.emoji && <div id="error">{errors.emoji}</div>}
+            {touched.emoji && errors.emoji && <section className="error">{errors.emoji}</section>}
             <Field name="emoji" type="text" autoComplete="off" />
 
             <label htmlFor="thought">What is your shower thought?</label>
-            {touched.thought && errors.thought && <div id="error">{errors.thought}</div>}
+            {touched.thought && errors.thought && (
+              <section className="error">{errors.thought}</section>
+            )}
             <Field component="textarea" name="thought" autoComplete="off" />
 
             <section className="button-group">
@@ -68,7 +70,7 @@ const AddThoughtForm = (props) => {
           </Form>
         )}
       </Formik>
-    </div>
+    </section>
   )
 }
 

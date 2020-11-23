@@ -72,7 +72,7 @@ class App extends Component {
           {displayForm === true ? (
             <>
               <Form toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought} />
-              <div id="overlay" onClick={this.toggleFormDisplay} />
+              <section className="overlay" onClick={this.toggleFormDisplay} />
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
