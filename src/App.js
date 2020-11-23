@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import './App.css'
+import Wrapper from './components/Wrapper.jsx'
 import Thought from './components/Thought.jsx'
-import Button from './components/Button.jsx'
+// import Button from './components/Button.jsx'
 import Form from './components/AddThoughtForm.jsx'
+import Header from './components/Header.jsx'
 import icon from './assets/icon-add.png'
 
 class App extends Component {
@@ -66,25 +68,26 @@ class App extends Component {
     const {thoughts, selectedIndex, displayForm} = this.state
 
     return (
-      <div className="App">
-        {displayForm === true ? (
-          <>
-            <Form
-              icon={icon}
-              toggleFormDisplay={this.toggleFormDisplay}
-              addNewThought={this.addNewThought}
-            />
-            <div id="overlay" onClick={this.toggleFormDisplay} />
-          </>
-        ) : null}
+      <section className="app">
+        <Header />
+        <Wrapper>
+          {displayForm === true ? (
+            <>
+              <Form
+                icon={icon}
+                toggleFormDisplay={this.toggleFormDisplay}
+                addNewThought={this.addNewThought}
+              />
+              <div id="overlay" onClick={this.toggleFormDisplay} />
+            </>
+          ) : null}
 
-        <h1>Shower Thoughts</h1>
-        <i className="fa fa-plus-circle" onClick={this.toggleFormDisplay} />
-        <Button onClick={this.handleChange} variant="large">
-          Randomize
-        </Button>
-        <Thought thought={thoughts[selectedIndex]} />
-      </div>
+          {/* <Button onClick={this.handleChange} variant="large">
+            Randomize
+          </Button> */}
+          <Thought thought={thoughts[selectedIndex]} />
+        </Wrapper>
+      </section>
     )
   }
 }

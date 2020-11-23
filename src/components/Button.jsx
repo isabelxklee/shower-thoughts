@@ -33,7 +33,6 @@ const Button = styled.button`
         fontSize: '1.6rem',
         backgroundColor: '#e8c030',
         color: 'black',
-        marginTop: '4rem',
         '&:hover': {
           color: '#e8c030',
           backgroundColor: 'black',
@@ -42,8 +41,9 @@ const Button = styled.button`
         '@media only screen and (max-width: 700px)': {
           right: '25%',
           width: '50%',
-          bottom: '5',
+          bottom: '0',
           position: 'fixed',
+          margin: '4rem 0',
         },
       },
     },
