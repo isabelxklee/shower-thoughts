@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import {variant} from 'styled-system'
 
-const Button = styled.button`
+const PrimaryButton = styled.button`
   font-family: 'Apfel Grotezk';
   background-color: black;
   color: white;
@@ -23,15 +22,6 @@ const Button = styled.button`
     margin: 0.4rem 0;
     width: 100%;
   }
-
-  ${variant({
-    variants: {
-      inverted: {
-        backgroundColor: 'white',
-        color: 'black',
-      },
-    },
-  })}
 `
 
-export default Button
+export default PrimaryButton

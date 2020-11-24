@@ -1,7 +1,8 @@
 import React from 'react'
 import * as Yup from 'yup'
 import {Formik, Form, Field} from 'formik'
-import Button from './Button.jsx'
+import PrimaryButton from './PrimaryButton.jsx'
+import SecondaryButton from './SecondaryButton.jsx'
 
 const formSchema = Yup.object().shape({
   emoji: Yup.string()
@@ -59,13 +60,13 @@ const AddThoughtForm = (props) => {
             <Field component="textarea" name="thought" autoComplete="off" />
 
             <section className="button-group">
-              <Button type="submit" id={errors.thought || errors.emoji ? 'error' : ''}>
+              <PrimaryButton type="submit" id={errors.thought || errors.emoji ? 'error' : ''}>
                 Create
-              </Button>
+              </PrimaryButton>
 
-              <Button variant="inverted" onClick={props.toggleFormDisplay} type="button">
+              <SecondaryButton variant="inverted" onClick={props.toggleFormDisplay} type="button">
                 Cancel
-              </Button>
+              </SecondaryButton>
             </section>
           </Form>
         )}

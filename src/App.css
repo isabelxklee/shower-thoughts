@@ -139,7 +139,7 @@ button#error {
 
   form {
     width: auto;
-    height: auto;
+    height: fit-content;
     margin: 0;
     padding: 3rem;
     top: 0;
