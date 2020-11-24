@@ -51,21 +51,23 @@ const AddThoughtForm = (props) => {
             <h3>Add shower thought</h3>
 
             <label htmlFor="emoji">Pick an emoji</label>
-            {touched.emoji && errors.emoji && <section className="error">{errors.emoji}</section>}
+            {touched.emoji && errors.emoji && (
+              <section className="error-message">{errors.emoji}</section>
+            )}
             <Field name="emoji" type="text" autoComplete="off" />
 
             <label htmlFor="thought">What is your shower thought?</label>
             {touched.thought && errors.thought && (
-              <section className="error">{errors.thought}</section>
+              <section className="error-message">{errors.thought}</section>
             )}
             <Field component="textarea" name="thought" autoComplete="off" />
 
             <section className="button-group">
-              {errors.thought || errors.emoji ?
-              <ErrorButton type="submit">Create</ErrorButton>
-              :
-              <PrimaryButton type="submit">Create</PrimaryButton>
-                }
+              {errors.thought || errors.emoji ? (
+                <ErrorButton type="submit">Create</ErrorButton>
+              ) : (
+                <PrimaryButton type="submit">Create</PrimaryButton>
+              )}
 
               <SecondaryButton variant="inverted" onClick={props.toggleFormDisplay} type="button">
                 Cancel

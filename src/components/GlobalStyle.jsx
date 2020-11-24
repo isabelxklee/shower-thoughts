@@ -105,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
   }
 
-  .error {
+  .error-message {
     color: rgb(218, 40, 0);
     margin: 0.6rem 0;
   }
