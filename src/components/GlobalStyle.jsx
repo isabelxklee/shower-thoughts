@@ -5,8 +5,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Apfel Grotezk';
     font-weight: 400;
     font-style: normal;
-    src: url('../fonts/Apfel-Grotezk-Regular.woff') format('font-woff'),
-         url('../fonts/Apfel-Grotezk-Regular.woff2') format('font-woff2')
+    src: local('Apfel Grotezk'),
+         url('/shower-thoughts/src/fonts/Apfel-Grotezk-Regular.woff') format('font-woff'),
+         url('/shower-thoughts/src/fonts/Apfel-Grotezk-Regular.woff2') format('font-woff2')
   }
 
   @keyframes fadeIn {
