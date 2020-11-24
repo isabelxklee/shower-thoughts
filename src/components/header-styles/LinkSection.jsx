@@ -6,8 +6,6 @@ const LinkSection = styled.section`
 
   @media only screen and (max-width: 700px) {
     float: none;
-    display: grid;
-    grid-row-gap: 0.4rem;
   }
 `
 

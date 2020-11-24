@@ -131,7 +131,7 @@ const GlobalStyle = createGlobalStyle`
   @media only screen and (max-width: 700px) {
     h2 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
 
     h3 {

@@ -14,7 +14,7 @@ const TextLink = styled.a`
   }
 
   @media only screen and (max-width: 700px) {
-    margin: 0 0 0.6rem 0;
+    margin: 0 0.8rem 0.6rem 0;
   }
 `
 

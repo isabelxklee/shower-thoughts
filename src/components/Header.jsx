@@ -8,8 +8,8 @@ const Header = ({handleChange, toggleFormDisplay}) => (
   <Navigation>
     <Title>Shower Thoughts</Title>
     <LinkSection>
-      <TextLink onClick={handleChange}>🔮 Randomize</TextLink>
-      <TextLink onClick={toggleFormDisplay}>⚡️ Create new thought</TextLink>
+      <TextLink onClick={handleChange}>🔮Randomize</TextLink>
+      <TextLink onClick={toggleFormDisplay}>⚡️Add thought</TextLink>
     </LinkSection>
   </Navigation>
 )
