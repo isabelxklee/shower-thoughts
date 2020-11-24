@@ -12,6 +12,7 @@
 
 - See random shower thoughts.
 - Add your own shower thought using a form.
+- Backend data: https://shower-thoughts-json.herokuapp.com/thoughts
 
 <a name="getting-started"/>
 
