@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './App.css'
+import GlobalStyle from './components/GlobalStyle.jsx'
 import Wrapper from './components/Wrapper.jsx'
 import Thought from './components/Thought.jsx'
 import Form from './components/AddThoughtForm.jsx'
@@ -67,6 +67,7 @@ class App extends Component {
 
     return (
       <section className="app">
+        <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
           {displayForm === true ? (
