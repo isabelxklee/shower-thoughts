@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const TextLink = styled.a`
   color: white;
-  font-family: 'Apfel Grotezk';
+  font-family: 'Apfel Grotezk', Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   transition: 0.3s;

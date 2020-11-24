@@ -5,7 +5,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Apfel Grotezk';
     font-weight: 400;
     font-style: normal;
-    src: local('Apfel Grotezk'), url('../fonts/Apfel-Grotezk-Regular.woff') format('font-woff');
+    src: url('../fonts/Apfel-Grotezk-Regular.woff') format('font-woff'),
+         url('../fonts/Apfel-Grotezk-Regular.woff2') format('font-woff2')
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   body {
@@ -40,29 +50,6 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0;
     font-size: 1rem;
-  }
-
-  .overlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    cursor: pointer;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   form {
@@ -121,11 +108,6 @@ const GlobalStyle = createGlobalStyle`
   .error {
     color: rgb(218, 40, 0);
     margin: 0.6rem 0;
-  }
-
-  button#error {
-    opacity: 0.5;
-    cursor: default;
   }
 
   @media only screen and (max-width: 700px) {

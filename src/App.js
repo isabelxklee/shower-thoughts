@@ -4,6 +4,7 @@ import Wrapper from './components/Wrapper.jsx'
 import Thought from './components/Thought.jsx'
 import Form from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
+import BgOverlay from './components/BgOverlay.jsx'
 
 class App extends Component {
   state = {
@@ -73,7 +74,7 @@ class App extends Component {
           {displayForm === true ? (
             <>
               <Form toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought} />
-              <section className="overlay" onClick={this.toggleFormDisplay} />
+              <BgOverlay onClick={this.toggleFormDisplay} />
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
