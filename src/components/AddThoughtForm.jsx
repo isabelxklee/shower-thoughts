@@ -5,36 +5,35 @@ import PrimaryButton from './PrimaryButton.jsx'
 import SecondaryButton from './SecondaryButton.jsx'
 import ErrorButton from './ErrorButton.jsx'
 
-const formSchema = Yup.object().shape({
-  emoji: Yup.string()
-    .max(5, "* Sorry, that's too many emojis!")
-    .required('* Please pick at least one emoji!'),
-  thought: Yup.string()
-    .min(30, '* Thoughts should be at least 30 characters.')
-    .max(250, "* Sorry, that's too long for a thought.")
-    .required('* This is a required field.'),
-})
-
-const handleSubmit = (props, values) => {
-  fetch('https://shower-thoughts-json.herokuapp.com/thoughts', {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify({
-      emoji: values.emoji,
-      quote: values.thought,
-    }),
-  })
-    .then((response) => response.json())
-    .then((newThought) => {
-      props.addNewThought(newThought)
-    })
-}
-
 const AddThoughtForm = (props) => {
+  const handleSubmit = (props, values) => {
+    fetch('https://shower-thoughts-json.herokuapp.com/thoughts', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        emoji: values.emoji,
+        quote: values.thought,
+      }),
+    })
+      .then((response) => response.json())
+      .then((newThought) => {
+        props.addNewThought(newThought)
+      })
+  }
+
+  const formSchema = Yup.object().shape({
+    emoji: Yup.string()
+      .max(5, "* Sorry, that's too many emojis!")
+      .required('* Please pick at least one emoji!'),
+    thought: Yup.string()
+      .min(30, '* Thoughts should be at least 30 characters.')
+      .max(250, "* Sorry, that's too long for a thought.")
+      .required('* This is a required field.'),
+  })
+
   return (
-    <section>
       <Formik
         initialValues={{
           emoji: '',
@@ -45,7 +44,6 @@ const AddThoughtForm = (props) => {
           handleSubmit(props, values)
         }}
       >
-        {/* this is a render method, which expects a react component */}
         {({errors, touched}) => (
           <Form>
             <h3>Add shower thought</h3>
@@ -76,7 +74,6 @@ const AddThoughtForm = (props) => {
           </Form>
         )}
       </Formik>
-    </section>
   )
 }
 

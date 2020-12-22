@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import GlobalStyle from './components/GlobalStyle.jsx'
 import Wrapper from './components/Wrapper.jsx'
 import Thought from './components/Thought.jsx'
-import Form from './components/AddThoughtForm.jsx'
+import AddThoughtForm from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
 import BgOverlay from './components/BgOverlay.jsx'
 
@@ -72,7 +72,7 @@ class App extends Component {
         <Wrapper>
           {displayForm === true ? (
             <>
-              <Form toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought} />
+              <AddThoughtForm toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought} />
               <BgOverlay onClick={this.toggleFormDisplay} />
             </>
           ) : null}
