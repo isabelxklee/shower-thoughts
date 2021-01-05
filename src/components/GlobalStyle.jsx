@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: #E5F6FF;
   }
 
@@ -108,18 +108,17 @@ const GlobalStyle = createGlobalStyle`
 
   section#thought {
     margin: 13rem auto;
-    padding: 20px;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 75%;
   }
 
   img.large-blob {
     display: inline-block;
     z-index: -10;
     position: fixed;
-    bottom: -1rem;
-    right: 1rem;
+    bottom: -3%;
+    right: 1%;
     width: 90%;
     overflow: hidden;
   }
@@ -156,8 +155,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     img.large-blob {
-      bottom: 2rem;
-      right: -10rem;
+      right: -25%;
       width: 200%;
     }
 
