@@ -12,6 +12,7 @@
 
 - See random shower thoughts.
 - Add your own shower thought using a form.
+- Backend data: https://shower-thoughts-json.herokuapp.com/thoughts
 
 <a name="getting-started"/>
 
@@ -40,5 +41,4 @@
 - [Formik](https://formik.org)
 - [Yup](https://github.com/jquense/yup)
 - [styled-components](https://styled-components.com)
-- [styled-system](https://styled-system.com)
 - HTML/CSS

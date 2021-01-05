@@ -13,7 +13,7 @@ const AddThoughtForm = (props) => {
         'Content-type': 'application/json',
       },
       body: JSON.stringify({
-        emoji: values.emoji,
+        date: values.date,
         quote: values.thought,
       }),
     })
@@ -23,10 +23,13 @@ const AddThoughtForm = (props) => {
       })
   }
 
+  const formatDate = () => (
+    new Date().toLocaleDateString()
+  )
+  
   const formSchema = Yup.object().shape({
-    emoji: Yup.string()
-      .max(5, "* Sorry, that's too many emojis!")
-      .required('* Please pick at least one emoji!'),
+    date: Yup.date()
+      .required('* Please enter a valid date.'),
     thought: Yup.string()
       .min(30, '* Thoughts should be at least 30 characters.')
       .max(250, "* Sorry, that's too long for a thought.")
@@ -36,7 +39,7 @@ const AddThoughtForm = (props) => {
   return (
       <Formik
         initialValues={{
-          emoji: '',
+          date: '',
           thought: '',
         }}
         validationSchema={formSchema}
@@ -48,11 +51,11 @@ const AddThoughtForm = (props) => {
           <Form>
             <h3>Add shower thought</h3>
 
-            <label htmlFor="emoji">Pick an emoji</label>
-            {touched.emoji && errors.emoji && (
-              <section className="error-message">{errors.emoji}</section>
+            <label htmlFor="date">Date</label>
+            {touched.date && errors.date && (
+              <section className="error-message">{errors.date}</section>
             )}
-            <Field name="emoji" type="text" autoComplete="off" />
+            <Field name="date" type="text" autoComplete="off" />
 
             <label htmlFor="thought">What is your shower thought?</label>
             {touched.thought && errors.thought && (
@@ -61,7 +64,7 @@ const AddThoughtForm = (props) => {
             <Field component="textarea" name="thought" autoComplete="off" />
 
             <section className="button-group">
-              {errors.thought || errors.emoji ? (
+              {errors.thought || errors.date ? (
                 <ErrorButton type="submit">Create</ErrorButton>
               ) : (
                 <PrimaryButton type="submit">Create</PrimaryButton>

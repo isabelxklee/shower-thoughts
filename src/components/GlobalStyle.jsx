@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 2.4rem;
   }
 
   h3 {
@@ -55,8 +55,8 @@ const GlobalStyle = createGlobalStyle`
 
   form {
     display: inline-grid;
-    background-color: white;
-    color: black;
+    background-color: #E5F6FF;
+    color: #083576;
     z-index: 2;
     width: 50%;
     height: 50%;
@@ -82,24 +82,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0.8rem;
     margin: 0.4rem 0 2rem 0;
     border-radius: 0.2rem;
-    border: 2px solid black;
+    border: 3px solid #ED6F95;
   }
 
   textarea {
-    width: 50%;
     height: 5rem;
-  }
-
-  input[type='text'] {
-    width: 10%;
-  }
-
-  input[type='submit'] {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 1rem 2.4rem;
-    cursor: pointer;
   }
 
   .button-group {
@@ -107,8 +94,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .error-message {
-    color: rgb(218, 40, 0);
+    color: #ED6F95;
     margin: 0.6rem 0;
+    font-size: 1rem;
+  }
+
+  section#thought {
+    padding: 6rem;
+    text-align: center;
   }
 
   @media only screen and (max-width: 700px) {
