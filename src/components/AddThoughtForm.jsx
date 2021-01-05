@@ -22,10 +22,9 @@ const AddThoughtForm = (props) => {
         props.addNewThought(newThought)
       })
   }
-  
+
   const formSchema = Yup.object().shape({
-    date: Yup.date()
-      .required('* Please enter a valid date.'),
+    date: Yup.date().required('* Please enter a valid date.'),
     thought: Yup.string()
       .min(30, '* Thoughts should be at least 30 characters.')
       .max(250, "* Sorry, that's too long for a thought.")
@@ -33,46 +32,46 @@ const AddThoughtForm = (props) => {
   })
 
   return (
-      <Formik
-        initialValues={{
-          date: '',
-          thought: '',
-        }}
-        validationSchema={formSchema}
-        onSubmit={(values) => {
-          handleSubmit(props, values)
-        }}
-      >
-        {({errors, touched}) => (
-          <Form>
-            <h3>Add a thought</h3>
+    <Formik
+      initialValues={{
+        date: '',
+        thought: '',
+      }}
+      validationSchema={formSchema}
+      onSubmit={(values) => {
+        handleSubmit(props, values)
+      }}
+    >
+      {({errors, touched}) => (
+        <Form>
+          <h3>Add a thought</h3>
 
-            <label htmlFor="date">Date</label>
-            {touched.date && errors.date && (
-              <section className="error-message">{errors.date}</section>
+          <label htmlFor="date">Date</label>
+          {touched.date && errors.date && (
+            <section className="error-message">{errors.date}</section>
+          )}
+          <Field name="date" type="text" autoComplete="off" />
+
+          <label htmlFor="thought">Your shower thought</label>
+          {touched.thought && errors.thought && (
+            <section className="error-message">{errors.thought}</section>
+          )}
+          <Field component="textarea" name="thought" autoComplete="off" />
+
+          <section className="button-group">
+            {errors.thought || errors.date ? (
+              <ErrorButton type="submit">Create</ErrorButton>
+            ) : (
+              <PrimaryButton type="submit">Create</PrimaryButton>
             )}
-            <Field name="date" type="text" autoComplete="off" />
 
-            <label htmlFor="thought">Your shower thought</label>
-            {touched.thought && errors.thought && (
-              <section className="error-message">{errors.thought}</section>
-            )}
-            <Field component="textarea" name="thought" autoComplete="off" />
-
-            <section className="button-group">
-              {errors.thought || errors.date ? (
-                <ErrorButton type="submit">Create</ErrorButton>
-              ) : (
-                <PrimaryButton type="submit">Create</PrimaryButton>
-              )}
-
-              <SecondaryButton onClick={props.toggleFormDisplay} type="button">
-                Cancel
-              </SecondaryButton>
-            </section>
-          </Form>
-        )}
-      </Formik>
+            <SecondaryButton onClick={props.toggleFormDisplay} type="button">
+              Cancel
+            </SecondaryButton>
+          </section>
+        </Form>
+      )}
+    </Formik>
   )
 }
 

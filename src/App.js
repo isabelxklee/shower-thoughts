@@ -73,12 +73,15 @@ class App extends Component {
         <Wrapper>
           {displayForm === true ? (
             <>
-              <AddThoughtForm toggleFormDisplay={this.toggleFormDisplay} addNewThought={this.addNewThought} />
+              <AddThoughtForm
+                toggleFormDisplay={this.toggleFormDisplay}
+                addNewThought={this.addNewThought}
+              />
               <BgOverlay onClick={this.toggleFormDisplay} />
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
-          <img src={BlobBackground} className="large-blob"/>
+          <img src={BlobBackground} className="large-blob" />
         </Wrapper>
       </section>
     )

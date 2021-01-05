@@ -54,6 +54,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
+  p.date {
+    color: #E5F6FF;
+  }
+
   form {
     display: inline-grid;
     background-color: #E5F6FF;
@@ -103,9 +107,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   section#thought {
-    position: relative;
-    top: 20rem;
-    padding: 0 14rem;
+    margin: 13rem auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
   }
 
   img.large-blob {
@@ -120,8 +126,7 @@ const GlobalStyle = createGlobalStyle`
 
   @media only screen and (max-width: 700px) {
     h2 {
-      margin: 0;
-      font-size: 2.4rem;
+      font-size: 1.8rem;
     }
 
     h3 {
@@ -148,6 +153,17 @@ const GlobalStyle = createGlobalStyle`
 
     .button-group {
       display: block;
+    }
+
+    img.large-blob {
+      bottom: 2rem;
+      right: -10rem;
+      width: 200%;
+    }
+
+    section#thought {
+      padding: 0;
+      width: 100%;
     }
   }
 `

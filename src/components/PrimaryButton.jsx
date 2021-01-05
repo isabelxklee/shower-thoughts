@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const PrimaryButton = styled.button`
   font-family: 'Authentic Sans', 'Helvetica', sans-serif;
-  background-color: #ED6F95;
+  background-color: #ed6f95;
   color: white;
   margin: 0rem 1rem 1rem 0;
   border-radius: 2rem;
