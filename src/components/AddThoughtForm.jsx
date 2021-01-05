@@ -22,10 +22,6 @@ const AddThoughtForm = (props) => {
         props.addNewThought(newThought)
       })
   }
-
-  const formatDate = () => (
-    new Date().toLocaleDateString()
-  )
   
   const formSchema = Yup.object().shape({
     date: Yup.date()
@@ -49,7 +45,7 @@ const AddThoughtForm = (props) => {
       >
         {({errors, touched}) => (
           <Form>
-            <h3>Add shower thought</h3>
+            <h3>Add a thought</h3>
 
             <label htmlFor="date">Date</label>
             {touched.date && errors.date && (
@@ -57,7 +53,7 @@ const AddThoughtForm = (props) => {
             )}
             <Field name="date" type="text" autoComplete="off" />
 
-            <label htmlFor="thought">What is your shower thought?</label>
+            <label htmlFor="thought">Your shower thought</label>
             {touched.thought && errors.thought && (
               <section className="error-message">{errors.thought}</section>
             )}

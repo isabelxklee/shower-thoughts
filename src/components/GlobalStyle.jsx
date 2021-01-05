@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: 2.4rem;
+    color: #E5F6FF;
   }
 
   h3 {
@@ -68,6 +69,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 0.4rem;
     padding: 2rem 4rem 13rem;
     animation: fadeIn 0.5s;
+    text-align: left;
   }
 
   label,
@@ -75,6 +77,7 @@ const GlobalStyle = createGlobalStyle`
   textarea {
     font-size: 1.2rem;
     font-family: 'Authentic Sans';
+    background-color: #E5F6FF;
   }
 
   input,
@@ -100,8 +103,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   section#thought {
-    padding: 6rem;
-    text-align: center;
+    position: relative;
+    top: 20rem;
+    padding: 0 14rem;
+  }
+
+  img.large-blob {
+    display: inline-block;
+    z-index: -10;
+    position: fixed;
+    bottom: -1rem;
+    right: 1rem;
+    width: 90%;
+    overflow: hidden;
   }
 
   @media only screen and (max-width: 700px) {

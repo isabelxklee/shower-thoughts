@@ -5,6 +5,7 @@ import Thought from './components/Thought.jsx'
 import AddThoughtForm from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
 import BgOverlay from './components/BgOverlay.jsx'
+import BlobBackground from './assets/blob.svg'
 
 class App extends Component {
   state = {
@@ -77,6 +78,7 @@ class App extends Component {
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
+          <img src={BlobBackground} className="large-blob"/>
         </Wrapper>
       </section>
     )
