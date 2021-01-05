@@ -67,7 +67,7 @@ const AddThoughtForm = (props) => {
                 <PrimaryButton type="submit">Create</PrimaryButton>
               )}
 
-              <SecondaryButton variant="inverted" onClick={props.toggleFormDisplay} type="button">
+              <SecondaryButton onClick={props.toggleFormDisplay} type="button">
                 Cancel
               </SecondaryButton>
             </section>

@@ -2,12 +2,11 @@ import {createGlobalStyle} from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Apfel Grotezk';
+    font-family: 'Authentic Sans';
     font-weight: 400;
     font-style: normal;
-    src: local('Apfel Grotezk'),
-         url('/shower-thoughts/src/fonts/Apfel-Grotezk-Regular.woff') format('font-woff'),
-         url('/shower-thoughts/src/fonts/Apfel-Grotezk-Regular.woff2') format('font-woff2')
+    src: local('Authentic Sans'),
+         url('/src/fonts/Authentic-Sans-90.woff2') format('font-woff')
   }
 
   @keyframes fadeIn {
@@ -22,10 +21,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Apfel Grotezk', Helvetica, sans-serif;
+    font-family: 'Authentic Sans', Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
-    background-color: #e8c030;
+    background-color: #E5F6FF;
+    color: #083576;
   }
 
   body,
@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
   input,
   textarea {
     font-size: 1.2rem;
-    font-family: 'Apfel Grotezk';
+    font-family: 'Authentic Sans';
   }
 
   input,

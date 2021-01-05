@@ -1,16 +1,11 @@
 import React from 'react'
 import Navigation from './header-styles/Navigation.jsx'
-import LinkSection from './header-styles/LinkSection.jsx'
-import TextLink from './header-styles/TextLink.jsx'
-import Title from './header-styles/Title.jsx'
+import PrimaryButton from './PrimaryButton.jsx'
 
 const Header = ({handleChange, toggleFormDisplay}) => (
   <Navigation>
-    <Title>Shower Thoughts</Title>
-    <LinkSection>
-      <TextLink onClick={handleChange}>🔮Randomize</TextLink>
-      <TextLink onClick={toggleFormDisplay}>⚡️Add thought</TextLink>
-    </LinkSection>
+    <PrimaryButton onClick={toggleFormDisplay}>Add thought</PrimaryButton>
+    <PrimaryButton onClick={handleChange}>Randomize</PrimaryButton>
   </Navigation>
 )
 

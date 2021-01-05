@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
 const PrimaryButton = styled.button`
-  font-family: 'Apfel Grotezk';
-  background-color: black;
+  font-family: 'Authentic Sans', 'Helvetica', sans-serif;
+  background-color: #ED6F95;
   color: white;
   margin: 0rem 1rem 1rem 0;
-  border: 2px solid black;
-  border-radius: 0.2rem;
+  border-radius: 2rem;
+  border: none;
   padding: 1rem 1.4rem;
   font-size: 1.2rem;
   font-weight: 400;
   transition: 0.3s;
-  width: 25%;
+  width: 50%;
+  display: inline-block;
   cursor: pointer;
 
   &:hover {
