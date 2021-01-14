@@ -22,7 +22,6 @@ const PrimaryButton = styled.button`
   @media (max-width: 700px) {
     margin: 0 10px 10px 0;
     width: 100%;
-    /* padding: 0 30px; */
   }
 `
 

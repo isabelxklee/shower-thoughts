@@ -13,18 +13,13 @@ class App extends Component {
     displayForm: false,
   }
 
-  componentDidMount() {
-    fetch('https://shower-thoughts-json.herokuapp.com/thoughts')
-      .then((response) => response.json())
-      .then((thoughtsArray) => {
-        const shuffledArray = thoughtsArray.sort(() => {
-          return 0.5 - Math.random()
-        })
-
-        this.setState({
-          thoughts: shuffledArray,
-        })
-      })
+  async componentDidMount() {
+    const response = await fetch('https://shower-thoughts-json.herokuapp.com/thoughts')
+    const thoughtsArray = await response.json()
+    const shuffledArray = thoughtsArray.sort(() => {
+      return 0.5 - Math.random()
+    })
+    this.setState({thoughts: shuffledArray})
   }
 
   toggleFormDisplay = () => {
@@ -72,7 +67,7 @@ class App extends Component {
         <Wrapper>
           <h1 className="title-1">Shower</h1>
           <h1 className="title-2">Thoughts</h1>
-          
+
           {displayForm === true ? (
             <>
               <AddThoughtForm
@@ -83,7 +78,6 @@ class App extends Component {
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
-          
         </Wrapper>
       </section>
     )

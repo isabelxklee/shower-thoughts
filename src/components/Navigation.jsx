@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Navigation = styled.header`
   top: 0;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 32px 16px;
   text-align: right;
   right: 0;
   position: fixed;

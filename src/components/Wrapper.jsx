@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  padding: 5rem 10rem;
+  padding: 18px 160px;
   text-align: center;
 
-  @media only screen and (max-width: 700px) {
-    padding: 4rem 2rem;
+  @media (max-width: 700px) {
+    padding: 64px 32px;
   }
 `
 

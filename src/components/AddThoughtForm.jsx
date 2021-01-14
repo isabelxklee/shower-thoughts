@@ -6,8 +6,8 @@ import SecondaryButton from './SecondaryButton.jsx'
 import ErrorButton from './ErrorButton.jsx'
 
 const AddThoughtForm = (props) => {
-  const handleSubmit = (props, values) => {
-    fetch('https://shower-thoughts-json.herokuapp.com/thoughts', {
+  const handleSubmit = async (props, values) => {
+    const settings = {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -16,11 +16,10 @@ const AddThoughtForm = (props) => {
         date: values.date,
         quote: values.thought,
       }),
-    })
-      .then((response) => response.json())
-      .then((newThought) => {
-        props.addNewThought(newThought)
-      })
+    }
+    const response = await fetch('https://shower-thoughts-json.herokuapp.com/thoughts', settings)
+    const newThought = await response.json()
+    props.addNewThought(newThought)
   }
 
   const formSchema = Yup.object().shape({
