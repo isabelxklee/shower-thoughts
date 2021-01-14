@@ -4,7 +4,7 @@ const Thought = ({thought}) => (
   <section id="thought">
     {thought ? (
       <>
-        <h2>{thought.quote}</h2>
+        <h2 className="thought">{thought.quote}</h2>
         <p className="date">{thought.date}</p>
       </>
     ) : null}

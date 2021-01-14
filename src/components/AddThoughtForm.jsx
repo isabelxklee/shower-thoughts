@@ -44,7 +44,7 @@ const AddThoughtForm = (props) => {
     >
       {({errors, touched}) => (
         <Form>
-          <h3>Add a thought</h3>
+          <h2>Add a thought</h2>
 
           <label htmlFor="date">Date</label>
           {touched.date && errors.date && (

@@ -5,7 +5,7 @@ import Thought from './components/Thought.jsx'
 import AddThoughtForm from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
 import BgOverlay from './components/BgOverlay.jsx'
-import BlobBackground from './assets/blob.svg'
+import BlobBackground from './assets/blob.png'
 
 class App extends Component {
   state = {
@@ -71,6 +71,7 @@ class App extends Component {
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
+          <h1 className="title-1">Shower</h1>
           {displayForm === true ? (
             <>
               <AddThoughtForm
@@ -81,7 +82,8 @@ class App extends Component {
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
-          <img src={BlobBackground} className="large-blob" />
+          <img src={BlobBackground} className="blob" />
+          <h1 className="title-2">Thoughts</h1>
         </Wrapper>
       </section>
     )

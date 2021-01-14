@@ -26,10 +26,10 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizelegibility;
     background-color: #E5F6FF;
     color: #083576;
+    background-image: url('../assets/background.png');
   }
 
   body,
-  h1,
   h2,
   h3,
   input {
@@ -37,16 +37,29 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 100px;
+    margin: 0;
+    position: fixed;
+  }
+
+  h1.title-1 {
+    left: 0;
+    top: 0;
+  }
+
+  h1.title-2 {
+    bottom: 0;
+    right: 0;
   }
 
   h2 {
-    font-size: 2rem;
-    color: #E5F6FF;
+    font-size: 32px;
   }
 
-  h3 {
-    font-size: 2rem;
+  h2.thought {
+    color:#E5F6FF;
   }
 
   p {
@@ -113,7 +126,7 @@ const GlobalStyle = createGlobalStyle`
     width: 75%;
   }
 
-  img.large-blob {
+  img.blob {
     display: inline-block;
     z-index: -10;
     position: fixed;
