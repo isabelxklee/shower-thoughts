@@ -105,6 +105,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 8px 0 38px;
     border-radius: 8px;
     border: 4px solid #A8C7D8;
+    color: #083576;
   }
 
   input:focus, textarea:focus {
@@ -113,7 +114,6 @@ const GlobalStyle = createGlobalStyle`
 
   input {
     width: 30%;
-    color: #083576;
   }
 
   textarea {
