@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Thought = ({thought}) => (
-  <section id="thought">
+  <section className="thought">
     {thought ? (
       <>
-        <h2 className="thought">{thought.quote}</h2>
+        <h2 className="thought-content">{thought.quote}</h2>
         <p className="date">{thought.date}</p>
       </>
     ) : null}

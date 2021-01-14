@@ -71,6 +71,8 @@ class App extends Component {
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
           <h1 className="title-1">Shower</h1>
+          <h1 className="title-2">Thoughts</h1>
+          
           {displayForm === true ? (
             <>
               <AddThoughtForm
@@ -81,7 +83,7 @@ class App extends Component {
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
-          <h1 className="title-2">Thoughts</h1>
+          
         </Wrapper>
       </section>
     )

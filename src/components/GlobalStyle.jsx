@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 32px;
   }
 
-  h2.thought {
+  h2.thought-content {
     color:#E5F6FF;
   }
 
@@ -124,23 +124,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
 
-  section#thought {
-    margin: 208px auto;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-  }
-
-  img.blob {
-    display: inline-block;
-    z-index: -10;
-    position: relative;
-    bottom: 500px;
+  .thought {
     margin: auto;
-    text-align: center;
-    width: 900px;
-    height: 650px;
-    overflow: hidden;
+    position: relative;
+    top: 200px;
+    width: 455px;
   }
 
   @media only screen and (max-width: 700px) {
