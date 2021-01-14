@@ -9,9 +9,10 @@ const Navigation = styled.header`
   position: fixed;
 
   @media only screen and (max-width: 700px) {
-    height: auto;
-    padding: 1rem 2rem;
+    padding: 0;
     text-align: center;
+    bottom: 20px;
+    top: unset;
   }
 `
 

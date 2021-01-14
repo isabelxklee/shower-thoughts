@@ -137,7 +137,23 @@ const GlobalStyle = createGlobalStyle`
     width: 455px;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 50px;
+      display: inline-block;
+      text-align: left;
+      margin: 10px auto;
+    }
+
+    h1.title-1, h1.title-2 {
+      left: 20px;
+    }
+
+    h1.title-2 {
+      bottom: unset;
+      top: 50px;
+    }
+
     h2 {
       font-size: 28px;
     }
