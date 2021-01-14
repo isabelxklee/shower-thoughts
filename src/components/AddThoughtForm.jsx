@@ -47,16 +47,16 @@ const AddThoughtForm = (props) => {
           <h2>Add a thought</h2>
 
           <label htmlFor="date">Date: </label>
-          <Field name="date" type="text" autoComplete="off" />
           {touched.date && errors.date && (
             <section className="error-message">{errors.date}</section>
           )}
+          <Field name="date" type="text" autoComplete="off" />
 
           <label htmlFor="thought">Your shower thought: </label>
-          <Field component="textarea" name="thought" autoComplete="off" />
           {touched.thought && errors.thought && (
             <section className="error-message">{errors.thought}</section>
           )}
+          <Field component="textarea" name="thought" autoComplete="off" />
 
           <section className="button-group">
             {errors.thought || errors.date ? (

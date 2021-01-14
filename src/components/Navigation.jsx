@@ -12,6 +12,8 @@ const Navigation = styled.header`
     padding: 0;
     bottom: 20px;
     top: unset;
+    width: 50%;
+    right: 20px;
   }
 `
 

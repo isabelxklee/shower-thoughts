@@ -4,11 +4,11 @@ const PrimaryButton = styled.button`
   font-family: 'Authentic Sans', 'Helvetica', sans-serif;
   background-color: #ed6f95;
   color: white;
-  margin: 0rem 1rem 1rem 0;
-  border-radius: 2rem;
+  margin: 0 16px 16px 0;
+  border-radius: 100px;
   border: none;
-  padding: 1rem 1.4rem;
-  font-size: 1.2rem;
+  padding: 16px 22px;
+  font-size: 20px;
   font-weight: 400;
   transition: 0.3s;
   width: 50%;
@@ -19,8 +19,10 @@ const PrimaryButton = styled.button`
     opacity: 0.5;
   }
 
-  @media only screen and (max-width: 700px) {
-    margin: 0rem 10px 10px 0;
+  @media (max-width: 700px) {
+    margin: 0 10px 10px 0;
+    width: 100%;
+    /* padding: 0 30px; */
   }
 `
 

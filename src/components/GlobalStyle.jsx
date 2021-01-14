@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
-import background from '../assets/background.png'
-import mobileBackground from '../assets/background-mobile.png'
+import background from '../assets/desktop-background.png'
+import mobileBackground from '../assets/mobile-background.png'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -102,8 +102,8 @@ const GlobalStyle = createGlobalStyle`
   input,
   textarea {
     padding: 12px;
-    margin: 8px 0;
-    border-radius: 0.2rem;
+    margin: 8px 0 38px;
+    border-radius: 8px;
     border: 4px solid #A8C7D8;
   }
 
@@ -117,7 +117,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   textarea {
-    height: 5rem;
+    height: 132px;
   }
 
   .button-group {
@@ -127,7 +127,7 @@ const GlobalStyle = createGlobalStyle`
 
   .error-message {
     color: #ED6F95;
-    margin: 8px 0 38px 0;
+    margin: 8px 0 4px;
     font-size: 16px;
   }
 
@@ -141,7 +141,7 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 700px) {
     body {
       background-image: url(${mobileBackground});
-      background-size: 500px;
+      background-size: 1000px;
     }
 
     h1 {
@@ -170,15 +170,9 @@ const GlobalStyle = createGlobalStyle`
 
     form {
       width: auto;
-      height: fit-content;
-      margin: 0;
-      padding: 48px;
-      top: 0;
-      left: 0;
-      right: 0;
-      position: fixed;
-      border-radius: 0;
-      grid-row-gap: 0.6rem;
+      padding: 16px;
+      grid-row-gap: 12px;
+      top: 20px;
     }
 
     input[type='text'],
@@ -186,13 +180,8 @@ const GlobalStyle = createGlobalStyle`
       width: auto;
     }
 
-    .button-group {
-      display: block;
-    }
-
-    img.large-blob {
-      right: -25%;
-      width: 200%;
+    textarea {
+      height: 150px;
     }
 
     .thought {
