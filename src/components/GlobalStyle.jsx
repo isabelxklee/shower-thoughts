@@ -77,18 +77,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   form {
-    display: inline-grid;
+    display: grid;
     background-color: #E5F6FF;
     color: #083576;
     z-index: 2;
-    width: 50%;
-    height: 50%;
-    top: 60px;
-    position: absolute;
+    width: 75%;
+    position: relative;
     margin: auto;
-    right: 20%;
     border-radius: 8px;
-    padding: 16px 32px 120px;
+    padding: 16px 32px;
     animation: fadeIn 0.5s;
     text-align: left;
   }
@@ -109,8 +106,13 @@ const GlobalStyle = createGlobalStyle`
     border: 4px solid #A8C7D8;
   }
 
+  input:focus, textarea:focus {
+    border: 4px solid #ED6F95;
+  }
+
   input {
     width: 30%;
+    color: #083576;
   }
 
   textarea {
