@@ -101,7 +101,7 @@ const GlobalStyle = createGlobalStyle`
   input,
   textarea {
     padding: 12px;
-    margin: 0.4rem 0 2rem 0;
+    margin: 8px 0;
     border-radius: 0.2rem;
     border: 4px solid #A8C7D8;
   }
@@ -126,7 +126,7 @@ const GlobalStyle = createGlobalStyle`
 
   .error-message {
     color: #ED6F95;
-    margin: 10px 0;
+    margin: 8px 0 38px 0;
     font-size: 16px;
   }
 
