@@ -10,6 +10,7 @@ const BgOverlay = styled.button`
   right: 0;
   bottom: 0;
   background-color: rgb(8, 53, 118, 0.6);
+  border: none;
   z-index: 1;
   cursor: default;
 `
