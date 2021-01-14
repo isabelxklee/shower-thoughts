@@ -46,13 +46,13 @@ const AddThoughtForm = (props) => {
         <Form>
           <h2>Add a thought</h2>
 
-          <label htmlFor="date">Date</label>
+          <label htmlFor="date">Date: </label>
           {touched.date && errors.date && (
             <section className="error-message">{errors.date}</section>
           )}
           <Field name="date" type="text" autoComplete="off" />
 
-          <label htmlFor="thought">Your shower thought</label>
+          <label htmlFor="thought">Your shower thought: </label>
           {touched.thought && errors.thought && (
             <section className="error-message">{errors.thought}</section>
           )}
@@ -60,9 +60,9 @@ const AddThoughtForm = (props) => {
 
           <section className="button-group">
             {errors.thought || errors.date ? (
-              <ErrorButton type="submit">Create</ErrorButton>
+              <ErrorButton type="submit">Submit</ErrorButton>
             ) : (
-              <PrimaryButton type="submit">Create</PrimaryButton>
+              <PrimaryButton type="submit">Submit</PrimaryButton>
             )}
 
             <SecondaryButton onClick={props.toggleFormDisplay} type="button">

@@ -83,13 +83,12 @@ const GlobalStyle = createGlobalStyle`
     z-index: 2;
     width: 50%;
     height: 50%;
-    top: 4rem;
+    top: 60px;
     position: absolute;
     margin: auto;
     right: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 0.4rem;
-    padding: 2rem 4rem 13rem;
+    border-radius: 8px;
+    padding: 16px 32px 120px;
     animation: fadeIn 0.5s;
     text-align: left;
   }
@@ -107,7 +106,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 12px;
     margin: 0.4rem 0 2rem 0;
     border-radius: 0.2rem;
-    border: 3px solid #ED6F95;
+    border: 4px solid #A8C7D8;
+  }
+
+  input {
+    width: 30%;
   }
 
   textarea {
@@ -116,6 +119,7 @@ const GlobalStyle = createGlobalStyle`
 
   .button-group {
     display: flex;
+    width: 50%;
   }
 
   .error-message {
