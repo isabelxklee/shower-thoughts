@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
+import background from '../assets/background.png'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -26,7 +27,11 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizelegibility;
     background-color: #E5F6FF;
     color: #083576;
-    background-image: url('../assets/background.png');
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
   }
 
   body,
@@ -64,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   p.date {
@@ -92,14 +97,14 @@ const GlobalStyle = createGlobalStyle`
   label,
   input,
   textarea {
-    font-size: 1.2rem;
+    font-size: 20px;
     font-family: 'Authentic Sans';
     background-color: #E5F6FF;
   }
 
   input,
   textarea {
-    padding: 0.8rem;
+    padding: 12px;
     margin: 0.4rem 0 2rem 0;
     border-radius: 0.2rem;
     border: 3px solid #ED6F95;
@@ -115,12 +120,12 @@ const GlobalStyle = createGlobalStyle`
 
   .error-message {
     color: #ED6F95;
-    margin: 0.6rem 0;
-    font-size: 1rem;
+    margin: 10px 0;
+    font-size: 16px;
   }
 
   section#thought {
-    margin: 13rem auto;
+    margin: 208px auto;
     justify-content: center;
     align-items: center;
     width: 75%;
@@ -129,27 +134,29 @@ const GlobalStyle = createGlobalStyle`
   img.blob {
     display: inline-block;
     z-index: -10;
-    position: fixed;
-    bottom: -3%;
-    right: 1%;
-    width: 90%;
+    position: relative;
+    bottom: 500px;
+    margin: auto;
+    text-align: center;
+    width: 900px;
+    height: 650px;
     overflow: hidden;
   }
 
   @media only screen and (max-width: 700px) {
     h2 {
-      font-size: 1.8rem;
+      font-size: 28px;
     }
 
     h3 {
-      margin: 1rem 0;
+      margin: 16px 0;
     }
 
     form {
       width: auto;
       height: fit-content;
       margin: 0;
-      padding: 3rem;
+      padding: 48px;
       top: 0;
       left: 0;
       right: 0;
