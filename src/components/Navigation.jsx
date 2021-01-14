@@ -10,7 +10,6 @@ const Navigation = styled.header`
 
   @media only screen and (max-width: 700px) {
     padding: 0;
-    text-align: center;
     bottom: 20px;
     top: unset;
   }

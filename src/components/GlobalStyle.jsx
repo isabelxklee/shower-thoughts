@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 import background from '../assets/background.png'
+import mobileBackground from '../assets/background-mobile.png'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -138,6 +139,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (max-width: 700px) {
+    body {
+      background-image: url(${mobileBackground});
+      background-size: 500px;
+    }
+
     h1 {
       font-size: 50px;
       display: inline-block;
@@ -189,7 +195,7 @@ const GlobalStyle = createGlobalStyle`
       width: 200%;
     }
 
-    section#thought {
+    .thought {
       padding: 0;
       width: 100%;
     }
