@@ -1,6 +1,8 @@
 import {createGlobalStyle} from 'styled-components'
 import background from '../assets/desktop-background.png'
 import mobileBackground from '../assets/mobile-background.png'
+import authenticSans90 from '../fonts/Authentic-Sans-90.woff2'
+import authenticSans150 from '../fonts/Authentic-Sans-150.woff2'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -8,7 +10,15 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     src: local('Authentic Sans'),
-         url('/src/fonts/Authentic-Sans-90.woff2') format('font-woff')
+         url(${authenticSans90}) format('woff2')
+  }
+
+  @font-face {
+    font-family: 'Authentic Sans';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Authentic Sans'),
+         url(${authenticSans150}) format('woff2')
   }
 
   @keyframes fadeIn {
