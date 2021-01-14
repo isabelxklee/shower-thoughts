@@ -89,6 +89,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 16px 32px;
     animation: fadeIn 0.5s;
     text-align: left;
+    top: 100px;
   }
 
   label,
@@ -134,7 +135,7 @@ const GlobalStyle = createGlobalStyle`
   .thought {
     margin: auto;
     position: relative;
-    top: 200px;
+    top: 300px;
     width: 455px;
   }
 
