@@ -66,8 +66,9 @@ class App extends Component {
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
-          <h1 className="title-1">Shower</h1>
-          <h1 className="title-2">Thoughts</h1>
+          <h1>
+            <span className="title-1">Shower</span> <span className="title-2">Thoughts</span>
+          </h1>
 
           {displayForm === true ? (
             <>
@@ -79,7 +80,7 @@ class App extends Component {
             </>
           ) : null}
           <Thought thought={thoughts[selectedIndex]} />
-          <img src={blob} className="blob"/>
+          <img src={blob} className="blob" />
         </Wrapper>
       </section>
     )

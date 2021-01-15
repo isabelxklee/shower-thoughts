@@ -42,7 +42,6 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    overflow: hidden;
   }
 
   body,
@@ -57,15 +56,18 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 900;
     font-size: 100px;
     margin: 0;
-    position: fixed;
   }
 
-  h1.title-1 {
+  .title-1, .title-2 {
+    position: absolute;
+  }
+
+  .title-1 {
     left: 0;
     top: 0;
   }
 
-  h1.title-2 {
+  .title-2 {
     bottom: 0;
     right: 0;
   }
@@ -160,13 +162,10 @@ const GlobalStyle = createGlobalStyle`
       margin: 10px auto;
     }
 
-    h1.title-1, h1.title-2 {
-      left: 20px;
-    }
-
-    h1.title-2 {
+    .title-2 {
       bottom: unset;
-      top: 50px;
+      right: unset;
+      left: 0;
     }
 
     h2 {
