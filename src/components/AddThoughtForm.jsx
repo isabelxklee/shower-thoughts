@@ -6,6 +6,14 @@ import SecondaryButton from './SecondaryButton.jsx'
 import ErrorButton from './ErrorButton.jsx'
 
 const AddThoughtForm = (props) => {
+  const formatDate = (date) => {
+    const day = date.getDate()
+    const month = date.getMonth() + 1
+    const year = date.getFullYear()
+
+    return `${month}.${day}.${year}`
+  }
+
   const handleSubmit = async (props, values) => {
     const newDate = new Date()
 
@@ -15,7 +23,7 @@ const AddThoughtForm = (props) => {
         'Content-type': 'application/json',
       },
       body: JSON.stringify({
-        date: newDate,
+        date: formatDate(newDate),
         quote: values.thought,
       }),
     }
