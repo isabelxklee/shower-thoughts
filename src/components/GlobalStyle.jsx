@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
-import background from '../assets/desktop-background.png'
-import mobileBackground from '../assets/mobile-background.png'
+import background from '../assets/desktop_landing.svg'
+import mobileBackground from '../assets/mobile_landing.svg'
 import authenticSans90 from '../fonts/Authentic-Sans-90.woff2'
 import authenticSans150 from '../fonts/Authentic-Sans-150.woff2'
 
@@ -39,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #E5F6FF;
     color: #083576;
     background-image: url(${background});
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -131,6 +132,21 @@ const GlobalStyle = createGlobalStyle`
     height: 132px;
   }
 
+  img.blob, .thought {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  img.blob {
+    z-index: -10;
+  }
+
+  .thought {
+    width: 35%;
+  }
+
   .button-group {
     display: flex;
     width: 50%;
@@ -142,19 +158,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
 
-  .thought {
-    margin: auto;
-    position: relative;
-    top: 300px;
-    width: 455px;
-  }
-
   @media (max-width: 700px) {
-    body {
-      background-image: url(${mobileBackground});
-      background-size: 1000px;
-    }
-
     h1 {
       font-size: 50px;
       display: inline-block;
@@ -196,8 +200,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .thought {
-      padding: 0;
-      width: 100%;
+      width: 75%;
     }
   }
 `
