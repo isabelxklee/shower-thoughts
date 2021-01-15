@@ -60,6 +60,7 @@ const GlobalStyle = createGlobalStyle`
 
   .title-1, .title-2 {
     position: absolute;
+    padding: 20px;
   }
 
   .title-1 {
@@ -157,9 +158,6 @@ const GlobalStyle = createGlobalStyle`
   @media (max-width: 700px) {
     h1 {
       font-size: 50px;
-      display: inline-block;
-      text-align: left;
-      margin: 10px auto;
     }
 
     .title-2 {
@@ -194,6 +192,10 @@ const GlobalStyle = createGlobalStyle`
 
     .thought {
       width: 75%;
+    }
+
+    img.blob {
+      height: 50%;
     }
   }
 `
