@@ -7,13 +7,15 @@ import ErrorButton from './ErrorButton.jsx'
 
 const AddThoughtForm = (props) => {
   const handleSubmit = async (props, values) => {
+    const newDate = new Date()
+
     const settings = {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
       },
       body: JSON.stringify({
-        date: values.date,
+        date: newDate,
         quote: values.thought,
       }),
     }
@@ -23,7 +25,6 @@ const AddThoughtForm = (props) => {
   }
 
   const formSchema = Yup.object().shape({
-    date: Yup.date().required('* Please enter a valid date.'),
     thought: Yup.string()
       .min(30, '* Thoughts should be at least 30 characters.')
       .max(250, "* Sorry, that's too long for a thought.")
@@ -33,7 +34,6 @@ const AddThoughtForm = (props) => {
   return (
     <Formik
       initialValues={{
-        date: '',
         thought: '',
       }}
       validationSchema={formSchema}
@@ -43,15 +43,7 @@ const AddThoughtForm = (props) => {
     >
       {({errors, touched}) => (
         <Form>
-          <h2>Add a thought</h2>
-
-          <label htmlFor="date">Date: </label>
-          {touched.date && errors.date && (
-            <section className="error-message">{errors.date}</section>
-          )}
-          <Field name="date" type="text" autoComplete="off" />
-
-          <label htmlFor="thought">Your shower thought: </label>
+          <label htmlFor="thought">Add a shower thought: </label>
           {touched.thought && errors.thought && (
             <section className="error-message">{errors.thought}</section>
           )}

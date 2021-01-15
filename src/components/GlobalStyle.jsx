@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
     right: 0;
   }
 
-  h2 {
+  h2, label {
     font-size: 32px;
   }
 
@@ -86,18 +86,15 @@ const GlobalStyle = createGlobalStyle`
     display: grid;
     background-color: #E5F6FF;
     color: #083576;
-    z-index: 2;
-    width: 75%;
-    position: relative;
+    z-index: 100;
+    width: 40%;
     margin: auto;
     border-radius: 8px;
     padding: 16px 32px;
     animation: fadeIn 0.5s;
     text-align: left;
-    top: 100px;
   }
 
-  label,
   input,
   textarea {
     font-size: 20px;
@@ -126,7 +123,11 @@ const GlobalStyle = createGlobalStyle`
     height: 132px;
   }
 
-  img.blob, .thought {
+  label {
+    margin: 10px 0;
+  }
+
+  img.blob, .thought, form {
     top: 50%;
     left: 50%;
     position: fixed;
@@ -168,18 +169,20 @@ const GlobalStyle = createGlobalStyle`
     img.blob {
       width: 100%;
     }
+
+    label {
+      font-size: 20px;
+      margin: 10px 0 0 0;
+    }
+
+    form {
+      width: 70%;
+    }
   }
 
   @media (max-width: 700px) {
     h3 {
       margin: 16px 0;
-    }
-
-    form {
-      width: auto;
-      padding: 16px;
-      grid-row-gap: 12px;
-      top: 20px;
     }
 
     input[type='text'],
