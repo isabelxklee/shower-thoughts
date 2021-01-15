@@ -142,6 +142,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   img.blob {
+    width: 75%;
     z-index: -10;
   }
 
@@ -155,7 +156,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     h1 {
       font-size: 50px;
     }
@@ -164,12 +165,20 @@ const GlobalStyle = createGlobalStyle`
       bottom: unset;
       right: unset;
       left: 0;
+      top: 8%;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 24px;
     }
 
+    img.blob {
+      width: 100%;
+      position: fixed;
+    }
+  }
+
+  @media (max-width: 700px) {
     h3 {
       margin: 16px 0;
     }
@@ -195,7 +204,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     img.blob {
-      height: 50%;
+      width: 150%;
+      position: fixed;
     }
   }
 `
