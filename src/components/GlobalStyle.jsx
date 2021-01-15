@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .title-1, .title-2 {
-    position: absolute;
+    position: fixed;
     padding: 20px;
   }
 
@@ -77,17 +77,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 32px;
   }
 
-  h2.thought-content {
-    color:#E5F6FF;
-  }
-
   p {
     margin: 0;
     font-size: 16px;
-  }
-
-  p.date {
-    color: #E5F6FF;
   }
 
   form {
@@ -137,7 +129,7 @@ const GlobalStyle = createGlobalStyle`
   img.blob, .thought {
     top: 50%;
     left: 50%;
-    position: absolute;
+    position: fixed;
     transform: translate(-50%, -50%);
   }
 
@@ -148,6 +140,7 @@ const GlobalStyle = createGlobalStyle`
 
   .thought {
     width: 35%;
+    color:#E5F6FF;
   }
 
   .error-message {
@@ -174,7 +167,6 @@ const GlobalStyle = createGlobalStyle`
 
     img.blob {
       width: 100%;
-      position: fixed;
     }
   }
 
@@ -205,7 +197,6 @@ const GlobalStyle = createGlobalStyle`
 
     img.blob {
       width: 150%;
-      position: fixed;
     }
   }
 `
