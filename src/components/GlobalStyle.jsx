@@ -141,7 +141,7 @@ const GlobalStyle = createGlobalStyle`
 
   .thought {
     width: 35%;
-    color:#E5F6FF;
+    color:#FFF;
   }
 
   .error-message {
