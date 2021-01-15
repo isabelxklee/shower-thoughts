@@ -1,6 +1,5 @@
 import {createGlobalStyle} from 'styled-components'
 import background from '../assets/desktop_landing.svg'
-import mobileBackground from '../assets/mobile_landing.svg'
 import authenticSans90 from '../fonts/Authentic-Sans-90.woff2'
 import authenticSans150 from '../fonts/Authentic-Sans-150.woff2'
 
@@ -145,11 +144,6 @@ const GlobalStyle = createGlobalStyle`
 
   .thought {
     width: 35%;
-  }
-
-  .button-group {
-    display: flex;
-    width: 50%;
   }
 
   .error-message {

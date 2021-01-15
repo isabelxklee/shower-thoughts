@@ -11,7 +11,6 @@ const PrimaryButton = styled.button`
   font-size: 20px;
   font-weight: 400;
   transition: 0.3s;
-  width: 50%;
   display: inline-block;
   cursor: pointer;
 
@@ -21,7 +20,6 @@ const PrimaryButton = styled.button`
 
   @media (max-width: 700px) {
     margin: 0 10px 10px 0;
-    width: 100%;
   }
 `
 
