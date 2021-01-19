@@ -159,7 +159,6 @@ const GlobalStyle = createGlobalStyle`
       bottom: unset;
       right: unset;
       left: 0;
-      top: 8%;
     }
 
     h2 {
