@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2, label {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   p {
@@ -131,7 +131,7 @@ const GlobalStyle = createGlobalStyle`
     top: 50%;
     left: 50%;
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(-46%, -54%);
   }
 
   img.blob {
@@ -194,11 +194,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .thought {
-      width: 75%;
+      width: 80%;
     }
 
     img.blob {
-      width: 150%;
+      width: 175%;
     }
   }
 `
