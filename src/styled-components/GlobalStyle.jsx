@@ -165,9 +165,9 @@ const GlobalStyle = createGlobalStyle`
       font-size: 24px;
     }
 
-    img.blob {
+    /* img.blob {
       width: 100%;
-    }
+    } */
 
     label {
       font-size: 20px;
