@@ -53,14 +53,21 @@ class App extends Component {
   }
 
   addNewThought = (newThought) => {
-    this.setState((state) => ({
-      thoughts: [...state.thoughts, newThought],
+    const {thoughts} = this.state
+    const newArray = [...thoughts, newThought]
+    const shuffledArray = newArray.sort(() => {
+      return 0.5 - Math.random()
+    })
+
+    this.setState({
+      thoughts: shuffledArray,
       displayForm: false,
-    }))
+    })
   }
 
   render() {
     const {thoughts, selectedIndex, displayForm} = this.state
+    console.log(thoughts)
 
     return (
       <section className="app">
