@@ -51,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
-  h1 {
+  /* h1 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 100px;
@@ -61,9 +61,9 @@ const GlobalStyle = createGlobalStyle`
   .title-1, .title-2 {
     position: fixed;
     padding: 20px;
-  }
+  } */
 
-  .title-1 {
+  /* .title-1 {
     left: 0;
     top: 0;
   }
@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
   .title-2 {
     bottom: 0;
     right: 0;
-  }
+  } */
 
   h2, label {
     font-size: 28px;
@@ -151,15 +151,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (max-width: 1000px) {
-    h1 {
+    /* h1 {
       font-size: 50px;
-    }
+    } */
 
-    .title-2 {
+    /* .title-2 {
       bottom: unset;
       right: unset;
       left: 0;
-    }
+    } */
 
     h2 {
       font-size: 24px;

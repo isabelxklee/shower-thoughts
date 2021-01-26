@@ -1,6 +1,6 @@
 import React from 'react'
-import Navigation from './Navigation.jsx'
-import PrimaryButton from './PrimaryButton.jsx'
+import Navigation from '../styled-components/Navigation.jsx'
+import PrimaryButton from '../styled-components/PrimaryButton.jsx'
 
 const Header = ({handleChange, toggleFormDisplay}) => (
   <Navigation>

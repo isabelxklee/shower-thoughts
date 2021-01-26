@@ -2,14 +2,13 @@ import React from 'react'
 import * as Yup from 'yup'
 import {Formik, Form, Field} from 'formik'
 import {format} from 'date-fns'
-import PrimaryButton from './PrimaryButton.jsx'
-import SecondaryButton from './SecondaryButton.jsx'
-import ErrorButton from './ErrorButton.jsx'
+import PrimaryButton from '../styled-components/PrimaryButton.jsx'
+import SecondaryButton from '../styled-components/SecondaryButton.jsx'
+import ErrorButton from '../styled-components/ErrorButton.jsx'
 
 const AddThoughtForm = (props) => {
   const handleSubmit = async (values) => {
     const newDate = format(new Date(), 'M.dd.yyyy')
-
     const settings = {
       method: 'POST',
       headers: {

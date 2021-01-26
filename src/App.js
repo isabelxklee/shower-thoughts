@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
-import GlobalStyle from './components/GlobalStyle.jsx'
-import Wrapper from './components/Wrapper.jsx'
+import GlobalStyle from './styled-components/GlobalStyle.jsx'
+import Wrapper from './styled-components/Wrapper.jsx'
 import Thought from './components/Thought.jsx'
 import AddThoughtForm from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
-import BgOverlay from './components/BgOverlay.jsx'
+import BgOverlay from './styled-components/BgOverlay.jsx'
+import Title from './styled-components/Title.jsx'
+import TitleTop from './styled-components/TitleTop.jsx'
+import TitleBottom from './styled-components/TitleBottom.jsx'
 import blob from './assets/desktop_blob.svg'
 
 class App extends Component {
@@ -66,9 +69,13 @@ class App extends Component {
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
-          <h1>
+          <Title $isTop={true}>Shower</Title>
+          <Title $isTop={false}>Thoughts</Title>
+          {/* <TitleTop>Shower</TitleTop>
+          <TitleBottom>Thoughts</TitleBottom> */}
+          {/* <h1>
             <span className="title-1">Shower</span> <span className="title-2">Thoughts</span>
-          </h1>
+          </h1> */}
 
           {displayForm === true ? (
             <>
