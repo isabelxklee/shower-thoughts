@@ -5,8 +5,8 @@ const ThoughtContainer = ({thought}) => (
   <Thought>
     {thought ? (
       <>
-        <h2 className="thought-content">{thought.quote}</h2>
-        <p className="date">{thought.date}</p>
+        <h2>{thought.quote}</h2>
+        <p>{thought.date}</p>
       </>
     ) : null}
   </Thought>

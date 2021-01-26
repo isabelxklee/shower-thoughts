@@ -7,8 +7,6 @@ import Header from './components/Header.jsx'
 import BgOverlay from './styled-components/BgOverlay.jsx'
 import Title from './styled-components/Title.jsx'
 import Blob from './styled-components/Blob.jsx'
-// import TitleTop from './styled-components/TitleTop.jsx'
-// import TitleBottom from './styled-components/TitleBottom.jsx'
 import blobImage from './assets/desktop_blob.svg'
 
 class App extends Component {
@@ -28,7 +26,6 @@ class App extends Component {
   }
 
   toggleFormDisplay = () => {
-    // when you're updating the state based off of the previous state, it has to be in the form of a callback
     this.setState((state) => ({
       displayForm: !state.displayForm,
     }))
@@ -89,7 +86,6 @@ class App extends Component {
           ) : null}
           <ThoughtContainer thought={thoughts[selectedIndex]} />
           <Blob src={blobImage} />
-          {/* <img src={blob} className="blob" /> */}
         </Wrapper>
       </section>
     )

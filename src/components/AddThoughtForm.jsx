@@ -4,6 +4,7 @@ import {Formik, Form, Field} from 'formik'
 import {format} from 'date-fns'
 import PrimaryButton from '../styled-components/PrimaryButton.jsx'
 import SecondaryButton from '../styled-components/SecondaryButton.jsx'
+import Label from '../styled-components/Label.jsx'
 import ErrorButton from '../styled-components/ErrorButton.jsx'
 import ErrorMessage from '../styled-components/ErrorMessage.jsx'
 
@@ -44,10 +45,10 @@ const AddThoughtForm = (props) => {
     >
       {({errors, touched}) => (
         <Form>
-          <label htmlFor="thought">Add a shower thought: </label>
+          <Label htmlFor="thought">Add a shower thought: </Label>
           {touched.thought && errors.thought && <ErrorMessage>{errors.thought}</ErrorMessage>}
           <Field component="textarea" name="thought" autoComplete="off" />
-          <div className="button-group">
+          <div>
             {errors.thought || errors.date ? (
               <ErrorButton type="submit">Submit</ErrorButton>
             ) : (
