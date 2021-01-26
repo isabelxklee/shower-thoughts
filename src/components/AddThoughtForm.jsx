@@ -1,21 +1,14 @@
 import React from 'react'
 import * as Yup from 'yup'
 import {Formik, Form, Field} from 'formik'
+import {format} from 'date-fns'
 import PrimaryButton from './PrimaryButton.jsx'
 import SecondaryButton from './SecondaryButton.jsx'
 import ErrorButton from './ErrorButton.jsx'
 
 const AddThoughtForm = (props) => {
-  const formatDate = (date) => {
-    const day = date.getDate()
-    const month = date.getMonth() + 1
-    const year = date.getFullYear()
-
-    return `${month}.${day}.${year}`
-  }
-
   const handleSubmit = async (values) => {
-    const newDate = new Date()
+    const newDate = format(new Date(), 'M.dd.yyyy')
 
     const settings = {
       method: 'POST',
@@ -23,7 +16,7 @@ const AddThoughtForm = (props) => {
         'Content-type': 'application/json',
       },
       body: JSON.stringify({
-        date: formatDate(newDate),
+        date: newDate,
         quote: values.thought,
       }),
     }
