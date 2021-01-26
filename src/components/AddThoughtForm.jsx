@@ -14,7 +14,7 @@ const AddThoughtForm = (props) => {
     return `${month}.${day}.${year}`
   }
 
-  const handleSubmit = async (props, values) => {
+  const handleSubmit = async (values) => {
     const newDate = new Date()
 
     const settings = {
@@ -46,7 +46,7 @@ const AddThoughtForm = (props) => {
       }}
       validationSchema={formSchema}
       onSubmit={(values) => {
-        handleSubmit(props, values)
+        handleSubmit(values)
       }}
     >
       {({errors, touched}) => (

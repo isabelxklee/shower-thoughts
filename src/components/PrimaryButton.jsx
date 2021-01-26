@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const PrimaryButton = styled.button`
   font-family: 'Authentic Sans', 'Helvetica', sans-serif;
   background-color: #ed6f95;
-  color: #FFF;
+  color: #fff;
   margin: 0 16px 16px 0;
   border-radius: 100px;
   border: none;
