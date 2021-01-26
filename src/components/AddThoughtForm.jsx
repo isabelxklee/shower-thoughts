@@ -5,6 +5,7 @@ import {format} from 'date-fns'
 import PrimaryButton from '../styled-components/PrimaryButton.jsx'
 import SecondaryButton from '../styled-components/SecondaryButton.jsx'
 import ErrorButton from '../styled-components/ErrorButton.jsx'
+import ErrorMessage from '../styled-components/ErrorMessage.jsx'
 
 const AddThoughtForm = (props) => {
   const handleSubmit = async (values) => {
@@ -44,12 +45,9 @@ const AddThoughtForm = (props) => {
       {({errors, touched}) => (
         <Form>
           <label htmlFor="thought">Add a shower thought: </label>
-          {touched.thought && errors.thought && (
-            <section className="error-message">{errors.thought}</section>
-          )}
+          {touched.thought && errors.thought && <ErrorMessage>{errors.thought}</ErrorMessage>}
           <Field component="textarea" name="thought" autoComplete="off" />
-
-          <section className="button-group">
+          <div className="button-group">
             {errors.thought || errors.date ? (
               <ErrorButton type="submit">Submit</ErrorButton>
             ) : (
@@ -59,7 +57,7 @@ const AddThoughtForm = (props) => {
             <SecondaryButton onClick={props.toggleFormDisplay} type="button">
               Cancel
             </SecondaryButton>
-          </section>
+          </div>
         </Form>
       )}
     </Formik>

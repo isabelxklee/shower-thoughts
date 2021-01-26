@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import GlobalStyle from './styled-components/GlobalStyle.jsx'
 import Wrapper from './styled-components/Wrapper.jsx'
-import Thought from './components/Thought.jsx'
+import ThoughtContainer from './components/ThoughtContainer.jsx'
 import AddThoughtForm from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
 import BgOverlay from './styled-components/BgOverlay.jsx'
@@ -87,7 +87,7 @@ class App extends Component {
               <BgOverlay onClick={this.toggleFormDisplay} />
             </>
           ) : null}
-          <Thought thought={thoughts[selectedIndex]} />
+          <ThoughtContainer thought={thoughts[selectedIndex]} />
           <Blob src={blobImage} />
           {/* <img src={blob} className="blob" /> */}
         </Wrapper>

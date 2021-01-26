@@ -127,28 +127,30 @@ const GlobalStyle = createGlobalStyle`
     margin: 10px 0;
   }
 
-  img.blob, .thought, form {
+  /* img.blob, */
+  /* .thought, */
+  form {
     top: 50%;
     left: 50%;
     position: fixed;
     transform: translate(-46%, -54%);
   }
 
-  img.blob {
+  /* img.blob {
     width: 75%;
     z-index: -10;
-  }
+  } */
 
-  .thought {
+  /* .thought {
     width: 35%;
     color:#FFF;
-  }
+  } */
 
-  .error-message {
+  /* .error-message {
     color: #ED6F95;
     margin: 8px 0 4px;
     font-size: 16px;
-  }
+  } */
 
   @media (max-width: 1000px) {
     /* h1 {
@@ -193,13 +195,13 @@ const GlobalStyle = createGlobalStyle`
       height: 150px;
     }
 
-    .thought {
+    /* .thought {
       width: 80%;
-    }
+    } */
 
-    img.blob {
+    /* img.blob {
       width: 175%;
-    }
+    } */
   }
 `
 

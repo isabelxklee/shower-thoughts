@@ -1,14 +1,15 @@
 import React from 'react'
+import Thought from '../styled-components/Thought.jsx'
 
-const Thought = ({thought}) => (
-  <section className="thought">
+const ThoughtContainer = ({thought}) => (
+  <Thought>
     {thought ? (
       <>
         <h2 className="thought-content">{thought.quote}</h2>
         <p className="date">{thought.date}</p>
       </>
     ) : null}
-  </section>
+  </Thought>
 )
 
-export default Thought
+export default ThoughtContainer
