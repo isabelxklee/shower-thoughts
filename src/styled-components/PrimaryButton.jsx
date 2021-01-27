@@ -12,7 +12,8 @@ const PrimaryButton = styled.button`
   font-weight: 400;
   transition: 0.3s;
   display: inline-block;
-  cursor: pointer;
+  cursor: ${({$isDisabled}) => ($isDisabled ? 'default' : 'pointer')};
+  opacity: ${({$isDisabled}) => ($isDisabled ? '0.5' : '1')};
 
   &:hover {
     opacity: 0.5;

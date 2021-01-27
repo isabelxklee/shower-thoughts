@@ -1,13 +1,12 @@
 import React from 'react'
 import * as Yup from 'yup'
-import {Formik, Field} from 'formik'
+import {Formik} from 'formik'
 import {format} from 'date-fns'
 import StyledForm from '../styled-components/StyledForm.jsx'
 import StyledTextArea from '../styled-components/StyledTextArea.jsx'
 import PrimaryButton from '../styled-components/PrimaryButton.jsx'
 import SecondaryButton from '../styled-components/SecondaryButton.jsx'
 import Label from '../styled-components/Label.jsx'
-import ErrorButton from '../styled-components/ErrorButton.jsx'
 import ErrorMessage from '../styled-components/ErrorMessage.jsx'
 
 const AddThoughtForm = (props) => {
@@ -51,12 +50,9 @@ const AddThoughtForm = (props) => {
           {touched.thought && errors.thought && <ErrorMessage>{errors.thought}</ErrorMessage>}
           <StyledTextArea component="textarea" name="thought" autoComplete="off" />
           <div>
-            {errors.thought || errors.date ? (
-              <ErrorButton type="submit">Submit</ErrorButton>
-            ) : (
-              <PrimaryButton type="submit">Submit</PrimaryButton>
-            )}
-
+            <PrimaryButton type="submit" $isDisabled={errors.thought || errors.date}>
+              Submit
+            </PrimaryButton>
             <SecondaryButton onClick={props.toggleFormDisplay} type="button">
               Cancel
             </SecondaryButton>

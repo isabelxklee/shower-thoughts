@@ -58,7 +58,6 @@ class App extends Component {
 
   render() {
     const {thoughts, selectedIndex, displayForm} = this.state
-    console.log(selectedIndex)
 
     return (
       <div>
@@ -69,8 +68,15 @@ class App extends Component {
           <TitleBottom>Thoughts</TitleBottom>
 
           <ThoughtNavigation>
-            <PrimaryButton onClick={this.previousThought}>Previous</PrimaryButton>
-            <PrimaryButton onClick={this.nextThought}>Next</PrimaryButton>
+            <PrimaryButton onClick={this.previousThought} $isDisabled={selectedIndex === 0}>
+              Previous
+            </PrimaryButton>
+            <PrimaryButton
+              onClick={this.nextThought}
+              $isDisabled={selectedIndex === thoughts.length - 1}
+            >
+              Next
+            </PrimaryButton>
           </ThoughtNavigation>
 
           {displayForm === true ? (
