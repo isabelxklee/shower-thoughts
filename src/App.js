@@ -7,6 +7,8 @@ import Header from './components/Header.jsx'
 import BgOverlay from './styled-components/BgOverlay.jsx'
 import TitleTop from './styled-components/TitleTop.jsx'
 import TitleBottom from './styled-components/TitleBottom.jsx'
+import ThoughtNavigation from './styled-components/ThoughtNavigation.jsx'
+import PrimaryButton from './styled-components/PrimaryButton.jsx'
 import Blob from './styled-components/Blob.jsx'
 import blobImage from './assets/desktop_blob.svg'
 
@@ -20,10 +22,8 @@ class App extends Component {
   async componentDidMount() {
     const response = await fetch('https://shower-thoughts-json.herokuapp.com/thoughts')
     const thoughtsArray = await response.json()
-    const shuffledArray = thoughtsArray.sort(() => {
-      return 0.5 - Math.random()
-    })
-    this.setState({thoughts: shuffledArray})
+
+    this.setState({thoughts: thoughtsArray})
   }
 
   toggleFormDisplay = () => {
@@ -32,44 +32,33 @@ class App extends Component {
     }))
   }
 
-  handleChange = () => {
+  nextThought = () => {
     this.setState((state) => {
-      // show this version first
-      // then refactor to the ternary operator
-      // reason: we only need 1 return, instead of 2 returns that reference the same property
-
-      // if (state.selectedIndex < arrLength - 1) {
-      //   return {
-      //     selectedIndex: state.selectedIndex + 1,
-      //   }
-      // } else {
-      //   return {
-      //     selectedIndex: 0,
-      //   }
-      // }
-
-      const arrLength = state.thoughts.length
-      return {selectedIndex: state.selectedIndex < arrLength - 1 ? state.selectedIndex + 1 : 0}
+      const arrLength = state.thoughts.length - 1
+      return {
+        selectedIndex: state.selectedIndex < arrLength ? state.selectedIndex + 1 : arrLength,
+      }
     })
   }
 
-  shuffleArray = (array) => array.sort(() => 0.5 - Math.random())
+  previousThought = () => {
+    this.setState((state) => {
+      return {
+        selectedIndex: state.selectedIndex > 0 ? state.selectedIndex - 1 : 0,
+      }
+    })
+  }
 
   addNewThought = (newThought) => {
-    const {thoughts} = this.state
-    const newArray = [...thoughts, newThought]
-    const shuffledArray = newArray.sort(() => {
-      return 0.5 - Math.random()
-    })
-
-    this.setState({
-      thoughts: shuffledArray,
+    this.setState((state) => ({
+      thoughts: [...state.places, newThought],
       displayForm: false,
-    })
+    }))
   }
 
   render() {
     const {thoughts, selectedIndex, displayForm} = this.state
+    console.log(selectedIndex)
 
     return (
       <div>
@@ -78,6 +67,11 @@ class App extends Component {
         <Wrapper>
           <TitleTop>Shower</TitleTop>
           <TitleBottom>Thoughts</TitleBottom>
+
+          <ThoughtNavigation>
+            <PrimaryButton onClick={this.previousThought}>Previous</PrimaryButton>
+            <PrimaryButton onClick={this.nextThought}>Next</PrimaryButton>
+          </ThoughtNavigation>
 
           {displayForm === true ? (
             <>
