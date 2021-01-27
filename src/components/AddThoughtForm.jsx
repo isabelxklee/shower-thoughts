@@ -1,7 +1,9 @@
 import React from 'react'
 import * as Yup from 'yup'
-import {Formik, Form, Field} from 'formik'
+import {Formik, Field} from 'formik'
 import {format} from 'date-fns'
+import StyledForm from '../styled-components/StyledForm.jsx'
+import StyledTextArea from '../styled-components/StyledTextArea.jsx'
 import PrimaryButton from '../styled-components/PrimaryButton.jsx'
 import SecondaryButton from '../styled-components/SecondaryButton.jsx'
 import Label from '../styled-components/Label.jsx'
@@ -44,10 +46,10 @@ const AddThoughtForm = (props) => {
       }}
     >
       {({errors, touched}) => (
-        <Form>
+        <StyledForm>
           <Label htmlFor="thought">Add a shower thought: </Label>
           {touched.thought && errors.thought && <ErrorMessage>{errors.thought}</ErrorMessage>}
-          <Field component="textarea" name="thought" autoComplete="off" />
+          <StyledTextArea component="textarea" name="thought" autoComplete="off" />
           <div>
             {errors.thought || errors.date ? (
               <ErrorButton type="submit">Submit</ErrorButton>
@@ -59,7 +61,7 @@ const AddThoughtForm = (props) => {
               Cancel
             </SecondaryButton>
           </div>
-        </Form>
+        </StyledForm>
       )}
     </Formik>
   )

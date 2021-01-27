@@ -1,12 +1,14 @@
 import React from 'react'
 import Thought from '../styled-components/Thought.jsx'
+import H2 from '../styled-components/H2.jsx'
+import P from '../styled-components/P.jsx'
 
 const ThoughtContainer = ({thought}) => (
   <Thought>
     {thought ? (
       <>
-        <h2>{thought.quote}</h2>
-        <p>{thought.date}</p>
+        <H2>{thought.quote}</H2>
+        <P>{thought.date}</P>
       </>
     ) : null}
   </Thought>

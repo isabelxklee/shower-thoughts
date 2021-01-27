@@ -5,7 +5,8 @@ import ThoughtContainer from './components/ThoughtContainer.jsx'
 import AddThoughtForm from './components/AddThoughtForm.jsx'
 import Header from './components/Header.jsx'
 import BgOverlay from './styled-components/BgOverlay.jsx'
-import Title from './styled-components/Title.jsx'
+import TitleTop from './styled-components/TitleTop.jsx'
+import TitleBottom from './styled-components/TitleBottom.jsx'
 import Blob from './styled-components/Blob.jsx'
 import blobImage from './assets/desktop_blob.svg'
 
@@ -52,6 +53,8 @@ class App extends Component {
     })
   }
 
+  shuffleArray = (array) => array.sort(() => 0.5 - Math.random())
+
   addNewThought = (newThought) => {
     const {thoughts} = this.state
     const newArray = [...thoughts, newThought]
@@ -67,20 +70,14 @@ class App extends Component {
 
   render() {
     const {thoughts, selectedIndex, displayForm} = this.state
-    console.log(thoughts)
 
     return (
-      <section className="app">
+      <div>
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
-          <Title $isTop={true}>Shower</Title>
-          <Title $isTop={false}>Thoughts</Title>
-          {/* <TitleTop>Shower</TitleTop>
-          <TitleBottom>Thoughts</TitleBottom> */}
-          {/* <h1>
-            <span className="title-1">Shower</span> <span className="title-2">Thoughts</span>
-          </h1> */}
+          <TitleTop>Shower</TitleTop>
+          <TitleBottom>Thoughts</TitleBottom>
 
           {displayForm === true ? (
             <>
@@ -94,7 +91,7 @@ class App extends Component {
           <ThoughtContainer thought={thoughts[selectedIndex]} />
           <Blob src={blobImage} />
         </Wrapper>
-      </section>
+      </div>
     )
   }
 }
