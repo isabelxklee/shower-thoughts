@@ -12,7 +12,7 @@ const Blob = styled.img`
     width: 100%;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 700px) {
     width: 175%;
   }
 `
