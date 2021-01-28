@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Thought = styled.div`
-  top: 50%;
+  top: 47%;
   left: 50%;
   position: fixed;
   transform: translate(-46%, -54%);

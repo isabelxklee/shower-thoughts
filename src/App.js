@@ -9,7 +9,7 @@ import TitleTop from './styled-components/TitleTop.jsx'
 import TitleBottom from './styled-components/TitleBottom.jsx'
 import ThoughtNavigation from './styled-components/ThoughtNavigation.jsx'
 import PrimaryButton from './styled-components/PrimaryButton.jsx'
-import P from './styled-components/P.jsx'
+import Counter from './styled-components/Counter.jsx'
 import Blob from './styled-components/Blob.jsx'
 import blobImage from './assets/desktop_blob.svg'
 
@@ -69,11 +69,8 @@ class App extends Component {
           <TitleBottom>Thoughts</TitleBottom>
 
           <ThoughtNavigation>
-            <P $isLight={true}>
-              {selectedIndex + 1} / {thoughts.length}
-            </P>
             <PrimaryButton onClick={this.previousThought} $isDisabled={selectedIndex === 0}>
-              Previous
+              Back
             </PrimaryButton>
             <PrimaryButton
               onClick={this.nextThought}
@@ -81,6 +78,9 @@ class App extends Component {
             >
               Next
             </PrimaryButton>
+            <Counter>
+              {selectedIndex + 1} / {thoughts.length}
+            </Counter>
           </ThoughtNavigation>
 
           {displayForm === true ? (
