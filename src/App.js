@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch('https://shower-thoughts-json.herokuapp.com/thoughts')
+    const response = await fetch('https://superhi-shower-thoughts.herokuapp.com/thoughts')
     const thoughtsArray = await response.json()
     this.setState({thoughts: thoughtsArray})
   }
