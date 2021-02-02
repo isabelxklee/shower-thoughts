@@ -23,7 +23,7 @@ const AddThoughtForm = (props) => {
         quote: values.thought,
       }),
     }
-    const response = await fetch('https://shower-thoughts-json.herokuapp.com/thoughts', settings)
+    const response = await fetch('https://superhi-shower-thoughts.herokuapp.com/thoughts', settings)
     const newThought = await response.json()
     props.addNewThought(newThought)
   }
