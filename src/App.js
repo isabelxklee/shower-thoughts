@@ -23,7 +23,6 @@ class App extends Component {
   async componentDidMount() {
     const response = await fetch('https://shower-thoughts-json.herokuapp.com/thoughts')
     const thoughtsArray = await response.json()
-
     this.setState({thoughts: thoughtsArray})
   }
 
@@ -37,15 +36,16 @@ class App extends Component {
     this.setState((state) => {
       const arrLength = state.thoughts.length - 1
       return {
-        selectedIndex: state.selectedIndex < arrLength ? state.selectedIndex + 1 : arrLength,
+        selectedIndex: state.selectedIndex < arrLength ? state.selectedIndex + 1 : 0,
       }
     })
   }
 
   previousThought = () => {
     this.setState((state) => {
+      const arrLength = state.thoughts.length - 1
       return {
-        selectedIndex: state.selectedIndex > 0 ? state.selectedIndex - 1 : 0,
+        selectedIndex: state.selectedIndex > 0 ? state.selectedIndex - 1 : arrLength,
       }
     })
   }
@@ -69,15 +69,8 @@ class App extends Component {
           <TitleBottom>Thoughts</TitleBottom>
 
           <ThoughtNavigation>
-            <PrimaryButton onClick={this.previousThought} $isDisabled={selectedIndex === 0}>
-              Back
-            </PrimaryButton>
-            <PrimaryButton
-              onClick={this.nextThought}
-              $isDisabled={selectedIndex === thoughts.length - 1}
-            >
-              Next
-            </PrimaryButton>
+            <PrimaryButton onClick={this.previousThought}>Back</PrimaryButton>
+            <PrimaryButton onClick={this.nextThought}>Next</PrimaryButton>
             <Counter>
               {selectedIndex + 1} / {thoughts.length}
             </Counter>
