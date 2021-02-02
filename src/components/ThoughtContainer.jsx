@@ -7,8 +7,8 @@ const ThoughtContainer = ({thought}) => (
   <Thought>
     {thought ? (
       <>
-        <H2>{thought.quote}</H2>
         <P $isLight={true}>{thought.date}</P>
+        <H2>{thought.quote}</H2>
       </>
     ) : null}
   </Thought>

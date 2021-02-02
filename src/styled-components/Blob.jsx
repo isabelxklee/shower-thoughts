@@ -9,11 +9,16 @@ const Blob = styled.img`
   z-index: -10;
 
   @media (max-width: 1000px) {
-    width: 100%;
+    width: 125%;
   }
 
   @media (max-width: 700px) {
-    width: 175%;
+    top: 53%;
+    width: 150%;
+  }
+
+  @media (max-width: 500px) {
+    width: 225%;
   }
 `
 
