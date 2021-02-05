@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import {ReactComponent as BlobSVG} from '../assets/desktop_blob.svg'
 
-const Blob = styled.img`
+const Blob = styled(BlobSVG)`
   top: 50%;
   left: 50%;
   position: fixed;

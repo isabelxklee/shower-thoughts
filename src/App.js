@@ -8,7 +8,6 @@ import BgOverlay from './styled-components/BgOverlay.jsx'
 import TitleTop from './styled-components/TitleTop.jsx'
 import TitleBottom from './styled-components/TitleBottom.jsx'
 import Blob from './styled-components/Blob.jsx'
-import blobImage from './assets/desktop_blob.svg'
 
 class App extends Component {
   state = {
@@ -89,7 +88,7 @@ class App extends Component {
             </>
           ) : null}
           <ThoughtContainer thought={thoughts[selectedIndex]} />
-          <Blob src={blobImage} />
+          <Blob />
         </Wrapper>
       </div>
     )
