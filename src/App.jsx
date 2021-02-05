@@ -12,12 +12,12 @@ class App extends Component {
     displayForm: false,
   }
 
-  shuffle = (array) => array.sort(() => 0.5 - Math.random())
+  shuffleArray = (array) => array.sort(() => 0.5 - Math.random())
 
   async componentDidMount() {
     const response = await fetch('https://superhi-shower-thoughts.herokuapp.com/thoughts')
     const thoughtsArray = await response.json()
-    const shuffledArray = this.shuffle(thoughtsArray)
+    const shuffledArray = this.shuffleArray(thoughtsArray)
     this.setState({thoughts: shuffledArray})
   }
 
@@ -48,16 +48,14 @@ class App extends Component {
     })
   }
 
-  shuffleArray = (array) => array.sort(() => 0.5 - Math.random())
-
   addNewThought = (newThought) => {
-    const {thoughts} = this.state
-    const newArray = [...thoughts, newThought]
-    const shuffledArray = this.shuffle(newArray)
-
-    this.setState({
-      thoughts: shuffledArray,
-      displayForm: false,
+    this.setState(({thoughts}) => {
+      const newThoughts = [...thoughts, newThought]
+      const shuffledArray = this.shuffleArray(newThoughts)
+      return {
+        thoughts: shuffledArray,
+        displayForm: false,
+      }
     })
   }
 
