@@ -43,9 +43,7 @@ const AddThoughtForm = (props) => {
         thought: '',
       }}
       validationSchema={formSchema}
-      onSubmit={(values) => {
-        handleSubmit(values)
-      }}
+      onSubmit={handleSubmit}
     >
       {({errors, touched}) => (
         <StyledForm>

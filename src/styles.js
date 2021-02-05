@@ -76,10 +76,10 @@ export const Blob = styled(BlobSVG)`
 export const PrimaryButton = styled.button`
   font-family: 'Authentic Sans', 'Helvetica', sans-serif;
   background-color: #ed6f95;
+  border: 2px solid #ed6f95;
   color: #fff;
   margin: 0 16px 16px 0;
   border-radius: 100px;
-  border: none;
   padding: 16px 22px;
   font-size: 20px;
   font-weight: 400;

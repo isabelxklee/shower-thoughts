@@ -57,11 +57,13 @@ export const StyledTextArea = styled(Field)`
 export const SecondaryButton = styled(PrimaryButton)`
   color: #083576;
   background-color: #a8c7d8;
+  border-color: #a8c7d8;
 `
 
 export const ErrorButton = styled(PrimaryButton)`
-  opacity: 0.5;
-  cursor: default;
+  background-color: transparent;
+  color: #ed6f95;
+  cursor: not-allowed;
 `
 
 export const ErrorMessage = styled.div`
