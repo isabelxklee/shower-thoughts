@@ -1,7 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 import background from '../assets/desktop_landing.svg'
-import authenticSans90 from '../fonts/Authentic-Sans-90.woff2'
-import authenticSans150 from '../fonts/Authentic-Sans-150.woff2'
+import authenticSans90 from '../assets/fonts/Authentic-Sans-90.woff2'
+import authenticSans150 from '../assets/fonts/Authentic-Sans-150.woff2'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
