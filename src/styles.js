@@ -52,55 +52,6 @@ export const Wrapper = styled.div`
   text-align: center;
 `
 
-export const BgOverlay = styled.button`
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(8, 53, 118, 0.8);
-  border: none;
-  z-index: 1;
-  cursor: default;
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 100px;
-  margin: 0;
-  position: fixed;
-  padding: 20px;
-
-  @media (max-width: 1000px) {
-    font-size: 50px;
-  }
-`
-
-export const TitleTop = styled(Title)`
-  left: 0;
-  top: 0;
-
-  @media (max-width: 700px) {
-    padding: 20px;
-  }
-`
-
-export const TitleBottom = styled(Title)`
-  right: 0;
-  bottom: 0;
-
-  @media (max-width: 700px) {
-    padding: 10px 20px;
-    left: 0;
-    right: unset;
-    bottom: unset;
-  }
-`
-
 export const Blob = styled(BlobSVG)`
   top: 50%;
   left: 50%;

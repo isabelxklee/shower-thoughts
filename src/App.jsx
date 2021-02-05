@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import Header from './components/Header'
+import Title from './components/Title'
 import ThoughtContainer from './components/ThoughtContainer'
-import AddThoughtForm from './components/AddThoughtForm'
-import {GlobalStyle, Wrapper, BgOverlay, TitleTop, TitleBottom, Blob} from './styles'
+import FormWrapper from './components/FormWrapper'
+import {GlobalStyle, Wrapper, Blob} from './styles'
 
 class App extends Component {
   state = {
@@ -68,17 +69,12 @@ class App extends Component {
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
-          <TitleTop>Shower</TitleTop>
-          <TitleBottom>Thoughts</TitleBottom>
-
-          {displayForm === true ? (
-            <>
-              <AddThoughtForm
-                toggleFormDisplay={this.toggleFormDisplay}
-                addNewThought={this.addNewThought}
-              />
-              <BgOverlay onClick={this.toggleFormDisplay} />
-            </>
+          <Title />
+          {displayForm ? (
+            <FormWrapper
+              toggleFormDisplay={this.toggleFormDisplay}
+              addNewThought={this.addNewThought}
+            />
           ) : null}
           <ThoughtContainer thought={thoughts[selectedIndex]} />
           <Blob />
