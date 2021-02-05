@@ -16,12 +16,12 @@ class App extends Component {
     displayForm: false,
   }
 
+  shuffle = (array) => array.sort(() => 0.5 - Math.random())
+
   async componentDidMount() {
     const response = await fetch('https://superhi-shower-thoughts.herokuapp.com/thoughts')
     const thoughtsArray = await response.json()
-    const shuffledArray = thoughtsArray.sort(() => {
-      return 0.5 - Math.random()
-    })
+    const shuffledArray = this.shuffle(thoughtsArray)
     this.setState({thoughts: shuffledArray})
   }
 
@@ -57,9 +57,7 @@ class App extends Component {
   addNewThought = (newThought) => {
     const {thoughts} = this.state
     const newArray = [...thoughts, newThought]
-    const shuffledArray = newArray.sort(() => {
-      return 0.5 - Math.random()
-    })
+    const shuffledArray = this.shuffle(newArray)
 
     this.setState({
       thoughts: shuffledArray,
@@ -71,7 +69,7 @@ class App extends Component {
     const {thoughts, selectedIndex, displayForm} = this.state
 
     return (
-      <div>
+      <>
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
@@ -90,7 +88,7 @@ class App extends Component {
           <ThoughtContainer thought={thoughts[selectedIndex]} />
           <Blob />
         </Wrapper>
-      </div>
+      </>
     )
   }
 }
