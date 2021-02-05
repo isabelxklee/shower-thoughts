@@ -1,7 +1,5 @@
 import React from 'react'
-import Thought from '../styled-components/Thought.jsx'
-import H2 from '../styled-components/H2.jsx'
-import P from '../styled-components/P.jsx'
+import {Thought, H2, P} from './styles'
 
 const ThoughtContainer = ({thought}) => (
   <Thought>

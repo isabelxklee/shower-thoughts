@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Navigation = styled.header`
+export const Nav = styled.nav`
   display: inline-flex;
   top: 0;
   margin: auto;
@@ -16,5 +16,3 @@ const Navigation = styled.header`
     right: 20px;
   }
 `
-
-export default Navigation

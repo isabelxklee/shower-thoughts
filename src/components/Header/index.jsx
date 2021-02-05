@@ -1,12 +1,12 @@
 import React from 'react'
-import Navigation from '../styled-components/Navigation.jsx'
-import PrimaryButton from '../styled-components/PrimaryButton.jsx'
+import {Nav} from './styles'
+import {PrimaryButton} from '../../styles'
 
 const Header = ({handleChange, toggleFormDisplay}) => (
-  <Navigation>
+  <Nav>
     <PrimaryButton onClick={toggleFormDisplay}>Add thought</PrimaryButton>
     <PrimaryButton onClick={handleChange}>Randomize</PrimaryButton>
-  </Navigation>
+  </Nav>
 )
 
 export default Header

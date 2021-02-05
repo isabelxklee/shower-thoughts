@@ -1,13 +1,8 @@
 import React, {Component} from 'react'
-import GlobalStyle from './styled-components/GlobalStyle.jsx'
-import Wrapper from './styled-components/Wrapper.jsx'
-import ThoughtContainer from './components/ThoughtContainer.jsx'
-import AddThoughtForm from './components/AddThoughtForm.jsx'
-import Header from './components/Header.jsx'
-import BgOverlay from './styled-components/BgOverlay.jsx'
-import TitleTop from './styled-components/TitleTop.jsx'
-import TitleBottom from './styled-components/TitleBottom.jsx'
-import Blob from './styled-components/Blob.jsx'
+import Header from './components/Header'
+import ThoughtContainer from './components/ThoughtContainer'
+import AddThoughtForm from './components/AddThoughtForm'
+import {GlobalStyle, Wrapper, BgOverlay, TitleTop, TitleBottom, Blob} from './styles'
 
 class App extends Component {
   state = {
