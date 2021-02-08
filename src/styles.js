@@ -1,7 +1,9 @@
 import styled, {createGlobalStyle} from 'styled-components'
 import background from './assets/desktop_landing.svg'
-import authenticSans90 from './assets/fonts/Authentic-Sans-90.woff2'
-import authenticSans150 from './assets/fonts/Authentic-Sans-150.woff2'
+import authenticSans90Woff from './assets/fonts/Authentic-Sans-90.woff'
+import authenticSans90Woff2 from './assets/fonts/Authentic-Sans-90.woff2'
+import authenticSans150Woff from './assets/fonts/Authentic-Sans-150.woff'
+import authenticSans150Woff2 from './assets/fonts/Authentic-Sans-150.woff2'
 import {ReactComponent as BlobSVG} from './assets/desktop_blob.svg'
 
 export const GlobalStyle = createGlobalStyle`
@@ -9,16 +11,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Authentic Sans';
     font-weight: 400;
     font-style: normal;
-    src: local('Authentic Sans'),
-         url(${authenticSans90}) format('woff2')
+    src: url(${authenticSans90Woff}), url(${authenticSans90Woff2});
   }
 
   @font-face {
     font-family: 'Authentic Sans';
     font-weight: 900;
     font-style: normal;
-    src: local('Authentic Sans'),
-         url(${authenticSans150}) format('woff2')
+    src: url(${authenticSans150Woff}), url(${authenticSans150Woff2});
   }
 
   @keyframes fadeIn {
