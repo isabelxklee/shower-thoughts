@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const BgOverlay = styled.button`
+export const BgOverlay = styled.button`
   position: fixed;
   display: block;
   width: 100%;
@@ -14,5 +14,3 @@ const BgOverlay = styled.button`
   z-index: 1;
   cursor: default;
 `
-
-export default BgOverlay

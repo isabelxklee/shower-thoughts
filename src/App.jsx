@@ -1,14 +1,9 @@
 import React, {Component} from 'react'
-import GlobalStyle from './styled-components/GlobalStyle.jsx'
-import Wrapper from './styled-components/Wrapper.jsx'
-import ThoughtContainer from './components/ThoughtContainer.jsx'
-import AddThoughtForm from './components/AddThoughtForm.jsx'
-import Header from './components/Header.jsx'
-import BgOverlay from './styled-components/BgOverlay.jsx'
-import TitleTop from './styled-components/TitleTop.jsx'
-import TitleBottom from './styled-components/TitleBottom.jsx'
-import Blob from './styled-components/Blob.jsx'
-import blobImage from './assets/desktop_blob.svg'
+import Header from './components/Header'
+import Title from './components/Title'
+import ThoughtContainer from './components/ThoughtContainer'
+import FormWrapper from './components/FormWrapper'
+import {GlobalStyle, Wrapper, Blob} from './styles'
 
 class App extends Component {
   state = {
@@ -17,12 +12,12 @@ class App extends Component {
     displayForm: false,
   }
 
+  shuffleArray = (array) => array.sort(() => 0.5 - Math.random())
+
   async componentDidMount() {
     const response = await fetch('https://superhi-shower-thoughts.herokuapp.com/thoughts')
     const thoughtsArray = await response.json()
-    const shuffledArray = thoughtsArray.sort(() => {
-      return 0.5 - Math.random()
-    })
+    const shuffledArray = this.shuffleArray(thoughtsArray)
     this.setState({thoughts: shuffledArray})
   }
 
@@ -53,18 +48,14 @@ class App extends Component {
     })
   }
 
-  shuffleArray = (array) => array.sort(() => 0.5 - Math.random())
-
   addNewThought = (newThought) => {
-    const {thoughts} = this.state
-    const newArray = [...thoughts, newThought]
-    const shuffledArray = newArray.sort(() => {
-      return 0.5 - Math.random()
-    })
-
-    this.setState({
-      thoughts: shuffledArray,
-      displayForm: false,
+    this.setState(({thoughts}) => {
+      const newThoughts = [...thoughts, newThought]
+      const shuffledArray = this.shuffleArray(newThoughts)
+      return {
+        thoughts: shuffledArray,
+        displayForm: false,
+      }
     })
   }
 
@@ -72,26 +63,21 @@ class App extends Component {
     const {thoughts, selectedIndex, displayForm} = this.state
 
     return (
-      <div>
+      <>
         <GlobalStyle />
         <Header handleChange={this.handleChange} toggleFormDisplay={this.toggleFormDisplay} />
         <Wrapper>
-          <TitleTop>Shower</TitleTop>
-          <TitleBottom>Thoughts</TitleBottom>
-
-          {displayForm === true ? (
-            <>
-              <AddThoughtForm
-                toggleFormDisplay={this.toggleFormDisplay}
-                addNewThought={this.addNewThought}
-              />
-              <BgOverlay onClick={this.toggleFormDisplay} />
-            </>
+          <Title />
+          {displayForm ? (
+            <FormWrapper
+              toggleFormDisplay={this.toggleFormDisplay}
+              addNewThought={this.addNewThought}
+            />
           ) : null}
           <ThoughtContainer thought={thoughts[selectedIndex]} />
-          <Blob src={blobImage} />
+          <Blob />
         </Wrapper>
-      </div>
+      </>
     )
   }
 }
